@@ -1,0 +1,30 @@
+body {
+  direction: ltr;
+  background-color:#caced1;
+}
+
+a {
+  text-decoration:none;
+  color: #0000AA;
+}
+a:visited {
+  text-decoration: none;
+  color: #AA3333; 
+}
+a:hover {
+  text-decoration: underline;
+  color: #444444;
+}
+
+pre{
+  background: #ffffdd;
+  border: 1px solid #999999;
+  color: #000000;
+  padding: 4px 4px 4px 4px;
+  overflow: auto;
+  font-size: 12px;
+  width: 98%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+

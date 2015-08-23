@@ -1,0 +1,36 @@
+digraph G {
+
+     "SparkDC++\nNon-GPL-compliant" [color=grey];
+     "GreylinkDC++\nNon-GPL-compliant" [color=grey];
+     "PeLink\nNon-GPL-compliant" [color=grey];
+     "RayLinkDC++\nNon-GPL-compliant" [color=grey];
+     "AvaLink\nNon-GPL-compliant" [color=grey];
+     "DC++" -> "LinuxDC++";
+     "DC++" -> "EiskaltDC++";
+     "DC++" -> "StrongDC++";
+     "DC++" -> "DiCe!++";
+     "DC++" -> "BCDC++";
+     "BCDC++" -> "StrongDC++" [style="dashed"];
+     "LinuxDC++" -> "FreeDC++";
+     "FreeDC++" -> "BMDC++";
+     "FreeDC++" -> "EiskaltDC++" [style="dashed"];
+     "StrongDC++" -> "zK++";
+     "StrongDC++" -> "TkDC++";
+     "StrongDC++" -> "RSX++";
+     "StrongDC++" -> "AirDC++";
+     "StrongDC++" -> "StrongDC++ SQLite";
+     "StrongDC++" -> "ApexDC++";
+     "StrongDC++ SQLite" -> "FlylinkDC++\nver >= 5xx" [style="dashed"];
+     "ApexDC++" -> "ApexDC++ Speed-Mod";
+     "ApexDC++" -> "FlylinkDC++\nver <= 4xx" [style="dashed"];
+     "ApexDC++" -> "DiCe!++" [style="dashed"];
+     "ApexDC++ Speed-Mod" -> "GreylinkDC++\nNon-GPL-compliant";
+     "ApexDC++ Speed-Mod" -> "FlylinkDC++\nver <= 4xx";
+     "GreylinkDC++\nNon-GPL-compliant" -> "PeLink\nNon-GPL-compliant";
+     "GreylinkDC++\nNon-GPL-compliant" -> "SparkDC++\nNon-GPL-compliant";
+     "GreylinkDC++\nNon-GPL-compliant" -> "RayLinkDC++\nNon-GPL-compliant";
+     "GreylinkDC++\nNon-GPL-compliant" -> "AvaLink\nNon-GPL-compliant" [style="dashed"];
+     "FlylinkDC++\nver <= 4xx" -> "FlylinkDC++\nver >= 5xx";
+     "FlylinkDC++\nver <= 4xx" -> "AvaLink\nNon-GPL-compliant";
+
+}

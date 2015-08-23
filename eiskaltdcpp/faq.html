@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+>
+<html lang="ru">
+  <head>
+    <meta content="text/html" charset="utf-8" http-equiv="content-type">
+    <meta content="Boris Pek" name="author">
+    <meta content="Tehnick (c) 2009-2015" name="copyright">
+    <title>EiskaltDC++ --- Часто задаваемые вопросы</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <script type="text/javascript" src="../func.js"></script>
+  <script type="text/javascript">timeoutId = setTimeout(AdHide, 1);</script>
+  <body bgcolor="white" text="black">
+
+
+    <div id="header" style="text-align: center;">
+      <hr noshade="true" size="1px" width="100%">
+      <font size="-1"> &nbsp;|&nbsp;
+      <a href="../">На главную</a> &nbsp;|&nbsp;
+      <a href="../hobby.html">Хобби</a> &nbsp;|&nbsp;
+      <a href="./">EiskaltDC++</a> &nbsp;|&nbsp;
+      <a href="./screenshots.html">Скриншоты</a> &nbsp;|&nbsp;
+      <a href="http://translate.google.com/translate?sl=ru&tl=en&u=http://tehnick-8.narod.ru/eiskaltdcpp/faq.html">Translate by Google</a> &nbsp;|&nbsp;
+      </font>
+      <br>
+    </div>
+
+
+  <div>
+  <hr noshade="true" size="1px" width="100%">
+  <h3>
+    EiskaltDC++ &mdash; Часто задаваемые вопросы
+  </h3>
+  <strong>Создано:</strong> 2010-09-18
+  <br>
+  <br>
+  <strong>Обновлено:</strong> 2013-07-12
+  <br>
+  <br>
+  <strong>Небольшой FAQ:</strong><br>
+
+
+<br>
+<b>Q:</b> Почему в EiskaltDC++ нет той или иной фичи, которая есть в FlylinkDC++ и StrongDC++ sqlite?
+<br>
+<b>A:</b> EiskaltDC++ никогда не перейдет на использование ядра StrongDC++ sqlite (не путать с оригинальным StrongDC++, см. схему ниже), которое так же используется во FlylinkDC++ (оба клиента развиваются одной командой разработчиков). Данное ядро сильно модифицировано и местами несовместимо с ядром оригинального DC++ и/или его производных (например, StrongDC++ и ApexDC++). Значительное количество собственных исправлений в коде ядра, сильно затрудняет его синхронизацию с актуальными версиями DC++. Базовое отличие ядра FlylinkDC++ во встроенной базе данных SQLite, все остальное лишь следствия. Например, <a href="https://ru.wikipedia.org/wiki/TTH">хэш суммы</a> файлов из шары FlylinkDC++ хранятся в файле базы данных, из-за чего вы не сможете перенести шару в DC++ или EiskaltDC++ простым копированием файлов из каталога настроек. Хэшировать все файлы придется заново (хотя, конечно, вы можете написать какой-нибудь конвертер, если есть время и желание). Между другими клиентами, основанными на ядре DC++, эти данные 
+переносимы (см. бинарный файл HashData.dat).
+  <center>
+    <a href="../dc_clients/Dcpp_clients.scheme.svg" id="dcpp_clients">
+      <img src="../dc_clients/Dcpp_clients.scheme.png" height="360" border="0">
+    </a>
+  </center>
+<br>
+<br>
+<b>Q:</b> Почему в EiskaltDC++ нет разделения на демона и графический интерфейс?
+<br>
+<b>A:</b> Это нерациональная трата ресурсов. Вместо прямой передачи:<br>
+<i>сообщение от ядра &rarr; обработка фронт-эндом</i><br>
+придется использовать:<br>
+<i>сообщение от ядра &rarr; обработка демоном (кодирование сообщения) &rarr; декодирование сообщения фронт-эндом &rarr; обработка фронт-эндом</i><br>
+Т.е. есть несколько лишних ресурсоемких операций. Кроме того, для передачи информации в бинарном виде от демона к фронт-энду придется делать свой велосипед вне зависимости от способа передачи (сокеты, tcp или др.). Передавать сообщения в текстовом виде нельзя, т.к. там слишком большой поток информации в единицу времени.
+<br>
+<br>
+<b>Q:</b> Но ведь в transmission это работает!
+<br>
+<b>A:</b> <a href="http://ru.wikipedia.org/wiki/Transmission">Transmission</a> &mdash; это очень хороший торрент-клиент, с грамотной архитектурой. Но он работает по совсем другому протоколу.
+<br>
+<br>
+В проколах <a href="http://ru.wikipedia.org/wiki/Direct_Connect">NMDC</a> и <a href="http://ru.wikipedia.org/wiki/Advanced_Direct_Connect">ADC</a> передается <u>значительно</u> больше информации в единицу времени чем в <a href="http://ru.wikipedia.org/wiki/BitTorrent">торрентах</a>. Например: сообщения о подключениях и отключениях пользователей, сообщения в чат, поисковые запросы и т.п.. Что заметно нагружает систему (загрузка процессора) на слабых машинах, когда пользователь подключен к нескольким крупным хабам, даже при существующей реализации DC-клиентов.
+<br>
+<br>
+Большинство этих сообщений ядра значимы и их нельзя просто игнорировать. Например: сообщения о подключениях пользователей нужны для формирования актуального списка подключенных к хабу пользователей, т.к. никак иначе эту информацию получить нельзя.
+<br>
+<br>
+Если же все-таки реализовать полноценное разделение на демона и фронт-энды, что мы получим в итоге?
+<br>
+<br>
+Демон будет занимать заметное место в оперативе (необходимо хранить информацию перед передачей фронт-энду) и сильно загружать процессор при кодировании информации перед передачей фронт-энду. Т.е. на слабом роутере его использовать будет затруднительно...
+<br>
+<br>
+Фронт-энд, который сможет подключаться к демону, вне зависимости от используемой ОС и архитектуры системы. Как сильно он будет нагружать процессор и какой потребуется передавать поток (трафик) от демона к нему зависит только от эфективности реализации сжатия информации (тот самый велосипед). Лучше сжатие &rarr; меньше трафик, но больше загрузка процессора, и наоборот...
+<br>
+<br>
+Оно вам надо?..
+<br>
+<br>
+<!--
+<b>Q:</b> А как же eiskaltdcpp-wt?
+<br>
+<b>A:</b> Он ничем принципиально не отличается от eiskaltdcpp-qt. Бинарник точно так же линкуется с ядром и выполняет те же функции. Основное отличие лишь в возможности запуска бинарника в качестве демона, который содержит встроенный веб-сервер и позволяет управлять задачами через веб-интерфейс из любого современного браузера.
+<br>
+<br>
+-->
+<b>Q:</b> Вы добавили в ядро поддержку DHT. Зачем?!
+<br>
+<b>A:</b> Пользотелям локальных сетей DHT конечно не нужен. Более того &mdash; он им вреден, т.к. клиент будет загружать файлы из интернета по соответствующему тарифу... Но для пользователей без локальных сетей и/или с безлимитными тарифами на интернет этот функционал будет крайне полезен. Не волнуйтесь, данная опция по умолчанию будет отключена.
+<br>
+<br>
+Реализация <a href="http://strongdc.sourceforge.net/download/StrongDC_DHT.pdf">DHT в StrongDC++</a>, которую мы используем, лишь в незначительных деталях отличается от реализации <a href="http://translated.by/you/protocol-dht/into-ru/">DHT в торрентах</a> (<a href="http://www.bittorrent.org/beps/bep_0005.html">en</a>). Все базовые идеи и основные алгоритмы остались неизменны.
+<br>
+<br>
+DHT для DC-сетей не зависит от хабов, так же как и DHT в торрентах не зависит от трекера. В настоящий момент в реализации DHT от StrongDC++ есть только обмен данными, но в будущем возможно будут реализованы так же приваты между нодами.
+<br>
+<br>
+В качестве примера полезности DHT: после добавления некоторого количества файлов в список загрузок, клиент можно отключить от хабов и все файлы будут успешно загружены. Без использования DHT, при отсутствии подключения к хабам, клиент не сможет найти новых источников файлов и через некоторое время загрузки будут прекращены.
+<br>
+<br>
+Разумеется, у DHT есть не только плюсы, но и минусы, о которых можно прочитать в соответствующей <a href="http://ru.wikipedia.org/wiki/DHT">статье</a> (<a href="http://en.wikipedia.org/wiki/Distributed_hash_table">en</a>) на Википедии.
+<br>
+<br>
+<b>Q:</b> Почему айскальт забанен на моем любимом хабе?
+<br>
+<b>A:</b> Причин может быть много... Например, при настройке хаба был использован старый конфиг скрипта, который блокирует все неизвестные ему клиеты. Или другой вариант: часто администраторы блокируют айскальт потому, что им не нравятся какие-либо функции клиента, которые так любят пользователи. Это такие фичи как: ограничение скорости загрузки и отдачи, ограничение минимального размера шары для раздач, IP-фильтр, антиспам (с возможностью игнорирования операторов хаба).
+<br>
+<br>
+<b>Q:</b> Что же мне делать?
+<br>
+<b>A:</b> Для начала, можно установить в настройках данного избранного хаба идентификационный тег от другого DC-клиента, который точно не забанен на данном хабе. Но лучше всего, конечно, если вы можете обсудить данную проблему с администратором хаба. Будьте вежливы и постарайтесь изложить свою позицию последовательно и аргументировано. Надеюсь, что ваше общение будет продуктивным...
+<br>
+<br>
+<b>Q:</b> Почему у программы не работает та или иная фича в Ubuntu?
+<br>
+<b>A:</b> Мы не поддерживаем Ubuntu Unity и GNOME Shell, потому что они продвигают свои нестандартные и несовместимые с другими DE решения, а их разработчики <a href="https://igurublog.wordpress.com/2012/11/05/gnome-et-al-rotting-in-threes/">не уважают</a> своих пользователей и труд других разработчиков.
+<br>
+<br>
+<b>Q:</b> Как я могу сделать пожертвование?
+<br>
+<b>A:</b> Никак. Мы не принимаем пожертвования.
+
+
+  <hr noshade="true" size="1px" width="100%">
+  <b>Лицензия:</b> <a href="http://creativecommons.org/publicdomain/mark/1.0/">Public Domain</a> (<a href="http://ru.wikipedia.org/wiki/Public_Domain">ru</a>, <a href="http://en.wikipedia.org/wiki/Public_Domain">en</a>)
+<!--
+  <a rel="license" href="http://creativecommons.org/publicdomain/mark/1.0/"><img src="http://i.creativecommons.org/p/mark/1.0/80x15.png" style="border-style:none;vertical-align:middle;" alt="Public Domain"/></a>
+-->
+  <br>
+  <b>Заметка:</b>
+  Все представленные здесь материалы можно использовать частично или полностью без указания ссылок на автора (меня) и оригинальную страницу.
+
+
+      <hr noshade="true" size="1px" width="100%">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td width="2%">
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t14.3;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://www.liveinternet.ru/stat/tehnick-8.narod.ru/">.</a>
+          </td>
+
+          <td width="2%">
+
+<script type='text/javascript' language='javascript'>
+
+r=escape(document.referrer); u=escape(document.URL);
+
+s=(typeof(screen)=='undefined')?'':screen.width+'x'+screen.height+'x'+(screen.colorDepth?screen.colorDepth:screen.pixelDepth);
+
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0" width="88" height="31" style="line-height:0;width:88px;"><tr style="height:10px;">
+
+<td style="padding:0;width:38px;height:10px;"><a href="http://www.24log.de" target="_blank"><img src="http://counter.24log.ru/buttons/24/bg24-4_1.gif" width="38" height="10" border="0" alt="Besucherzahler" title="Besucherzahler " style="margin:0;padding:0;" /></a></td>
+
+<td style="padding:0;width:50px;height:10px;"><a href="http://www.1russianbrides.com" target="_blank"><img src="http://counter.24log.ru/buttons/24/bg24-4_3.gif" width="50" height="10" border="0" alt="foreign brides" style="margin:0;padding:0;"></a></td></tr>
+
+<tr style="height:21px;"><td style="padding:0;width:38px;height:21px"><a href="http://www.24log.ru" target="_blank"><img src="http://counter.24log.ru/buttons/24/bg24-4_2.gif" width="38" height="21" alt="счетчик посещений" title="счетчик посещений" border="0" style="margin:0;padding:0;" /></a></td>
+
+<script type='text/javascript' language='javascript'>
+
+document.write('<td style="padding:0px;width:50px;height:21px;"><a href="http://www.24log.ru/rating/rating.php?c=16" target="_blank"><img border="0" width="50" height="21" src="http://counter.24log.ru/counter?id=86235&t=24&st=4&r='+r+'&s='+s+'&u='+u+'&rnd='+Math.random()+'" alt="Рейтинг: Разное" title="Показано число просмотров всего и за сегодня" style="margin:0;padding:0;" /></a></td>');
+
+</script></tr></table><NOSCRIPT><a href="http://www.russianwoman.ca"></a></NOSCRIPT>
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://www.24log.ru/stat/stat.php?project_id=86235">.</a>
+          </td>
+
+          <td width="2%">
+
+<!-- GoStats JavaScript Based Code -->
+<script type="text/javascript" src="http://gostats.ru/js/counter.js"></script>
+<script type="text/javascript">_gos='c4.gostats.ru';_goa=350940;
+_got=2;_goi=87;_goz=0;_gol='рейтинг сайтов';_GoStatsRun();</script>
+<noscript><a target="_blank" title="рейтинг сайтов"
+href="http://gostats.ru"><img alt="рейтинг сайтов"
+src="http://c4.gostats.ru/bin/count/a_350940/t_2/i_87/counter.png"
+style="border-width:0" /></a></noscript>
+<!-- End GoStats JavaScript Based Code -->
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://c4.gostats.ru/summary.xml?id=350940">.</a>
+          </td>
+
+          <td width="2%">
+
+<!-- MyCounter v.2.0 -->
+<script type="text/javascript"><!--
+my_id = 69834;
+my_width = 88;
+my_height = 31;
+my_alt = "MyCounter - счётчик и статистика";
+//--></script>
+<script type="text/javascript"
+  src="http://scripts.mycounter.ua/counter2.0.js">
+</script><noscript>
+<a target="_blank" href="http://mycounter.ua/"><img
+src="http://get.mycounter.ua/counter.php?id=69834"
+title="MyCounter - счётчик и статистика"
+alt="MyCounter - счётчик и статистика"
+width="88" height="31" border="0" /></a></noscript>
+<!--/ MyCounter -->
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://mycounter.ua/stats/?id=69834">.</a>
+          </td>
+
+          <td align="right">
+
+<a href="http://counter.co.kz" target="_blank"><img src="http://counter.co.kz/CounterCoKz?page=tehnick-8.narod.ru_eiskaltdcpp_faq.html&style=netscap&digits=1" alt="." border=0 height="11"></a>
+
+          </td>
+        </tr>
+      </table>
+
+
+    </div>
+    <div style="text-align: center;">
+      <hr noshade="true" size="1px" width="100%">
+      <font size="-1">Tehnick &copy; 2009-2015</font>
+    </div>
+  </body>
+</html>

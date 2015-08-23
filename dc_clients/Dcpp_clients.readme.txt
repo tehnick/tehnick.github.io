@@ -1,0 +1,13 @@
+# Make image file:
+dot -Tpng Dcpp_clients.scheme.dot -o Dcpp_clients.scheme.png
+dot -Tsvg Dcpp_clients.scheme.dot -o Dcpp_clients.scheme.svg
+
+
+# Additional links:
+http://www.adcportal.com/wiki/DCpp_Inheritance
+http://commons.wikimedia.org/wiki/File:DC%2B%2B_derivatives_.svg
+http://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Dcpp_clients.png
+
+
+# License for the scheme: Public Domain
+http://creativecommons.org/publicdomain/mark/1.0/

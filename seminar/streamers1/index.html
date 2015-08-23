@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+>
+<html lang="ru">
+  <head>
+    <meta content="text/html" charset="utf-8" http-equiv="content-type">
+    <meta content="Boris Pek" name="author">
+    <meta content="Tehnick (c) 2009-2015" name="copyright">
+    <title>Доклад --- Лавинно-стримерный переход</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <script type="text/javascript" src="../../func.js"></script>
+  <script type="text/javascript">timeoutId = setTimeout(AdHide, 1);</script>
+  <body style="direction: ltr;">
+
+
+    <div id="header" style="text-align: center;">
+      <hr noshade="true" size="1px" width="100%">
+      <font size="-1"> &nbsp;|&nbsp;
+      <a href="../../">На главную</a> &nbsp;|&nbsp;
+      </font>
+      <br>
+    </div>
+
+
+      <hr noshade="true" size="1px" width="100%">
+      <h3>
+         Доклад "Лавинно-стримерный переход"
+      </h3>
+      <strong><a id="date_0" href="javascript:ShowInfo('date_0','Дата доклада')">Дата</a>:</strong> 2009-03-02
+      <br>
+      <br>
+      <strong><a id="date_1" href="javascript:ShowInfo('date_1','Дата публикации')">Публикация</a>:</strong> июнь 2009
+      <br>
+      <br>
+      <strong>Описание:</strong>
+      <ul>
+        <li>
+          Обобщение результатов моделирования стримеров в газовой смеси азота и кислорода, полученных на семинарах в прошлом семестре.
+        </li>
+        <li>
+          Рассмотрены модели стримера в однородном и неоднородном полях.
+        </li>
+      </ul>
+      <strong>Содержание:</strong>
+      <ul>
+        <li>
+           Общие параметры моделей. Система уравнений. Расчетные сетки.
+        </li>
+        <li>
+           Результаты моделирования с подробным анализом.
+        </li>
+      </ul>
+
+
+      <hr noshade="true" size="1px" width="100%">
+      <strong>Ссылки:</strong>
+          &nbsp; <a href="Presentation.pdf">Презентация</a>
+          &nbsp; <a href="Text.pdf">Текст доклада</a>
+          &nbsp; <a href="Thesises.pdf">Тезисы на конференцию</a>
+          &nbsp; <a href="Report.pdf.7z">Отчет</a>
+          (<a href="Report.doc.7z">doc</a>)
+          &nbsp; <a href="Poster.pdf.7z">Плакат</a>
+          (<a href="Poster.ppt.7z">ppt</a>)
+      <br>
+      <b>Лицензия:</b> <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a> (<a href="http://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D0%B8_Creative_Commons">ru</a>, <a href="http://en.wikipedia.org/wiki/Creative_Commons_licenses">en</a>)
+<!--
+      <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="CC-BY" style="border-width:0;vertical-align:middle;" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+-->
+      <br>
+      <b>Заметка:</b>
+      При использовании фрагментов или полной перепечатке материалов, представленных здесь, ссылка на автора (для презентации, текста и отчета) или авторов (для тезисов и плаката) обязательна.
+      <br>
+      <strong>Примечание:</strong>
+      Работа была представлена на IX международной научной конференции &laquo;<a href="http://ehd.pmf.ru/rus/main.php?id=main">Современные проблемы электрофизики и электрогидродинамики жидкостей</a>&raquo;, которая прошла с 22 июня по 26 июня 2009 года в Санкт-Петербурге.
+      <br>
+      <b>Библиографическая ссылка:</b>
+      <br>
+      <i>Самусенко А.В., Стишков Ю.К., Пек Б.Э.</i> Особенности лавинно-стримерного перехода в однородном и неоднородном электрическом поле // Сборник трудов IX Международной научной конференции &laquo;Современные проблемы электрофизики и электрогидродинамики жидкостей&raquo;. Санкт-Петербург, 2009. С. 206–209.
+
+
+      <hr noshade="true" size="1px" width="100%">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td width="2%">
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t14.3;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://www.liveinternet.ru/stat/tehnick-8.narod.ru/">.</a>
+          </td>
+
+          <td width="2%">
+
+<script type='text/javascript' language='javascript'>
+
+r=escape(document.referrer); u=escape(document.URL);
+
+s=(typeof(screen)=='undefined')?'':screen.width+'x'+screen.height+'x'+(screen.colorDepth?screen.colorDepth:screen.pixelDepth);
+
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0" width="88" height="31" style="line-height:0;width:88px;"><tr style="height:10px;">
+
+<td style="padding:0;width:38px;height:10px;"><a href="http://www.24log.de" target="_blank"><img src="http://counter.24log.ru/buttons/24/bg24-4_1.gif" width="38" height="10" border="0" alt="Besucherzahler" title="Besucherzahler " style="margin:0;padding:0;" /></a></td>
+
+<td style="padding:0;width:50px;height:10px;"><a href="http://www.1russianbrides.com" target="_blank"><img src="http://counter.24log.ru/buttons/24/bg24-4_3.gif" width="50" height="10" border="0" alt="foreign brides" style="margin:0;padding:0;"></a></td></tr>
+
+<tr style="height:21px;"><td style="padding:0;width:38px;height:21px"><a href="http://www.24log.ru" target="_blank"><img src="http://counter.24log.ru/buttons/24/bg24-4_2.gif" width="38" height="21" alt="счетчик посещений" title="счетчик посещений" border="0" style="margin:0;padding:0;" /></a></td>
+
+<script type='text/javascript' language='javascript'>
+
+document.write('<td style="padding:0px;width:50px;height:21px;"><a href="http://www.24log.ru/rating/rating.php?c=16" target="_blank"><img border="0" width="50" height="21" src="http://counter.24log.ru/counter?id=86235&t=24&st=4&r='+r+'&s='+s+'&u='+u+'&rnd='+Math.random()+'" alt="Рейтинг: Разное" title="Показано число просмотров всего и за сегодня" style="margin:0;padding:0;" /></a></td>');
+
+</script></tr></table><NOSCRIPT><a href="http://www.russianwoman.ca"></a></NOSCRIPT>
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://www.24log.ru/stat/stat.php?project_id=86235">.</a>
+          </td>
+
+          <td width="2%">
+
+<!-- GoStats JavaScript Based Code -->
+<script type="text/javascript" src="http://gostats.ru/js/counter.js"></script>
+<script type="text/javascript">_gos='c4.gostats.ru';_goa=350940;
+_got=2;_goi=87;_goz=0;_gol='рейтинг сайтов';_GoStatsRun();</script>
+<noscript><a target="_blank" title="рейтинг сайтов"
+href="http://gostats.ru"><img alt="рейтинг сайтов"
+src="http://c4.gostats.ru/bin/count/a_350940/t_2/i_87/counter.png"
+style="border-width:0" /></a></noscript>
+<!-- End GoStats JavaScript Based Code -->
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://c4.gostats.ru/summary.xml?id=350940">.</a>
+          </td>
+
+          <td width="2%">
+
+<!-- MyCounter v.2.0 -->
+<script type="text/javascript"><!--
+my_id = 69834;
+my_width = 88;
+my_height = 31;
+my_alt = "MyCounter - счётчик и статистика";
+//--></script>
+<script type="text/javascript"
+  src="http://scripts.mycounter.ua/counter2.0.js">
+</script><noscript>
+<a target="_blank" href="http://mycounter.ua/"><img
+src="http://get.mycounter.ua/counter.php?id=69834"
+title="MyCounter - счётчик и статистика"
+alt="MyCounter - счётчик и статистика"
+width="88" height="31" border="0" /></a></noscript>
+<!--/ MyCounter -->
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://mycounter.ua/stats/?id=69834">.</a>
+          </td>
+
+          <td align="right">
+
+<a href="http://counter.co.kz" target="_blank"><img src="http://counter.co.kz/CounterCoKz?page=tehnick-8.narod.ru_seminar_streamers1_&style=netscap&digits=1" alt="." border=0 height="11"></a>
+
+          </td>
+        </tr>
+      </table>
+
+
+    </div>
+    <div style="text-align: center;">
+      <hr noshade="true" size="1px" width="100%">
+      <font size="-1">Tehnick &copy; 2009-2015</font>
+    </div>
+  </body>
+</html>

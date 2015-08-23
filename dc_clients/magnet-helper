@@ -1,0 +1,51 @@
+#!/bin/sh
+
+URL="$@"
+
+LIST_TORRENTS="transmission
+deluge
+azureus
+vuze
+ktorrent
+leechcraft -type url_encoded
+qbittorrent
+"
+
+LIST_DCPP="eiskaltdc
+eiskaltdcpp
+freedcpp
+linuxdcpp
+leechcraft -type url_encoded"
+
+url_handler() {
+	LIST="$1"
+	URL="$2"
+	echo "${LIST}" | \
+	while read PRG PARAMS ; do
+		PRG_PTH="/usr/bin/${PRG}"
+		if [ -e "${PRG_PTH}" ] ; then
+			[ "${PARAMS}" ] && PARAMS=" ${PARAMS}"
+			echo "exec ${PRG_PTH}${PARAMS} ${URL}"
+			exec ${PRG_PTH}${PARAMS} "${URL}"
+			break;
+		fi
+	done
+}
+
+#main
+
+URL_TYPE=$(echo "${URL}" | sed 's/.*xt=urn:\([^:]*\):.*/\1/')
+
+case "${URL_TYPE}" in
+	btih)
+		url_handler "${LIST_TORRENTS}" "${URL}"
+	;;
+
+	tree)
+		url_handler "${LIST_DCPP}" "${URL}"
+	;;
+
+	*)
+		echo "Error: url handler $URL_TYPE not found"
+	;;
+esac

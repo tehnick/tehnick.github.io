@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+>
+<html lang="ru">
+  <head>
+    <meta content="text/html" charset="utf-8" http-equiv="content-type">
+    <meta content="Boris Pek" name="author">
+    <meta content="Tehnick (c) 2009-2015" name="copyright">
+    <title>DC клиенты для Linux</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <script type="text/javascript" src="../func.js"></script>
+  <script type="text/javascript">timeoutId = setTimeout(AdHide, 1);</script>
+  <body bgcolor="white" text="black">
+
+
+    <div id="header" style="text-align: center;">
+      <hr noshade="true" size="1px" width="100%">
+      <font size="-1"> &nbsp;|&nbsp;
+      <a href="../">На главную</a> &nbsp;|&nbsp;
+      <a href="./magnet-links.html">Настройка перехвата magnet-ссылок</a> &nbsp;|&nbsp;
+      <a href="http://translate.google.com/translate?sl=ru&tl=en&u=http://tehnick-8.narod.ru/dc_clients/">Translate by Google</a> &nbsp;|&nbsp;
+      </font>
+      <br>
+    </div>
+
+
+<div>
+  <hr noshade="true" size="1px" width="100%">
+  <h3>
+    DC клиенты для Linux
+  </h3>
+  <strong>Создано:</strong> 2010-02-11
+  <br>
+  <br>
+  <strong>Обновлено:</strong> 2011-09-28
+  <br>
+  <br>
+  <strong>Описание:</strong>
+  <br>
+  <br>
+  Вот неполный список <a href="http://ru.wikipedia.org/wiki/Direct_Connect">DC</a>-клиентов, доступных для Debian:
+  <ul>
+    <li>
+<a href="https://launchpad.net/linuxdcpp">LinuxDC++</a> [<a href="http://linuxdcpp.berlios.de/articles.php?um=index">old</a>] (свежие deb-пакеты есть <a href="https://launchpad.net/~linuxdcpp-team/+archive/ppa/+packages">здесь</a>, релизы делают редко, но какая-то <a href="http://bazaar.launchpad.net/~linuxdcpp-team/linuxdcpp/trunk/changes">активность в Bazaar</a> имеется)
+    </li>
+    <li>
+<a href="http://freedcpp.narod.ru/">FreeDC++</a> (основан на исходном коде LinuxDC++; подробности <a href="../freedcpp/">здесь</a>) Для тех, кто не в теме: рекомендую прочитать <a href="http://freedcpp.googlecode.com/svn/trunk/Changelog-svn.txt">журнал изменений</a> freedcpp (на русском). Особенное внимание следует обратить на исправление таких серьезных и неприятных ошибок, как внезапная заморозка интерфейса и куча ошибок сегментации. Кроме того, автор freedcpp реализовал много дополнительного функционала, о котором просили пользователи. Недальновидный же автор linuxdcpp отклоняет почти все фичквесты, потому что подобный функционал ему не нужен. Да и сторонние патчи он не принимает в подавляющем большинстве случаев.
+    </li>
+    <li>
+<a href="http://freedcppmv.sourceforge.net/">BMDC++</a> [<a href="https://launchpad.net/bmdc++">l</a>, <a href="http://sourceforge.net/projects/freedcppmv/">s</a>] (основан на исходном коде FreeDC++; содержит <a href="http://bazaar.launchpad.net/~freedcpp/bmdc++/trunk/view/head:/BMDC-Changelog.txt">дополнительный функционал</a> и чешскую локализацию; <a href="http://bazaar.launchpad.net/~freedcpp/bmdc++/trunk/changes">разрабатывается</a> достаточно активно, но только одним человеком; программа пока еще очень сырая)
+    </li>
+    <li>
+<a href="http://wxdcgui.sourceforge.net/">Valknut</a> [<a href="http://valknut.ru/">ru</a>] (у автора какие-то проблемы?)
+    </li>
+    <li>
+<a href="http://eiskaltdc.sourceforge.net/news.php">EiskaltDC</a> (<a href="http://ru.wikipedia.org/wiki/Форк">форк</a> от Valknut, до декабря 2009 года <a href="http://sourceforge.net/projects/eiskaltdc/develop">активно развивался</a>, <a href="http://eiskaltdc.svn.sourceforge.net/viewvc/eiskaltdc/trunk/ChangeLog">были добавлены</a> многие полезные функции; интерфейс программы немного непривычен, скриншоты <a href="eiskaltdc_1.0.2.png">1.0.2</a> и <a href="eiskaltdc_1.0.40.png">1.0.40</a>; последняя версия: <a href="http://klan-hub.ru/packages/eiskaltdc/eiskaltdc/eiskaltdc_1.0.41/">1.0.41</a>)
+    </li>
+    <li>
+<a href="http://code.google.com/p/eiskaltdc/">EiskaltDC++</a> (<a href="http://wiki.edumandriva.ru/wiki/index.php/%D0%9A%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D1%8B_Direct_Connect_%28DC%29_%D0%B8%D0%BB%D0%B8_Peer-To-Peer_%28P2P%29_%D0%B4%D0%BB%D1%8F_%D0%BB%D0%B8%D0%BD%D1%83%D0%BA%D1%81:_Valknut-mod,_EiskaltDC,_EiskaltDC%2B%2B#.D0.98.D1.81.D1.82.D0.BE.D1.80.D0.B8.D1.8F_.D1.81.D0.BE.D0.B7.D0.B4.D0.B0.D0.BD.D0.B8.D1.8F_.D0.BA.D0.BB.D0.B8.D0.B5.D0.BD.D1.82.D0.BE.D0.B2_Valknut-mod.2C_EiskaltDC.2C_EiskaltDC.2B.2B">не путать с EiskaltDC</a>) &mdash; это наследник EiskaltDC лишь формально, код полностью переписан. Подробности <a href="../eiskaltdcpp/">здесь</a>. Сейчас это лучший клиент для юниксоподобных систем (Linux, *BSD и Mac OS X). Причем объективно, а не потому что я участвую в разработке.
+    </li>
+    <li>
+<a href="http://www.kde-apps.org/content/show.php?content=14157">dc-qt</a> [<a href="http://sourceforge.net/projects/dc-qt/">s</a>] (есть архитектурное разделение на ядро и gui; проект умер)
+    </li>
+  </ul>
+  <br>
+  Другие DC клиенты под Linux, которые я не пробовал:
+  <ul>
+    <li>
+<a href="http://sourceforge.net/projects/nanodc/">nanodc</a> (консольный склиент; <a href="http://sourceforge.net/dbimage.php?id=139012">скриншот</a>; труп)
+    </li>
+    <li>
+<a href="http://www.nongnu.org/microdc/">microdc</a> (консольный склиент; давно мертв)
+    </li>
+    <li>
+<a href="http://corsair626.no-ip.org/microdc/">microdc2</a> (консольный склиент; признаков жизни не подает)
+    </li>
+    <li>
+<a href="http://dev.yorhel.nl/ncdc">ncdc</a> (консольный склиент, написанный на C; достаточно активно <a href="http://dev.yorhel.nl/ncdc/changes">развивается</a>; крайне рекомендую ознакомится с <a href="http://dev.yorhel.nl/ncdc/guide">руководством пользователя</a> и <a href="http://dev.yorhel.nl/ncdc/faq">FAQ</a>)
+    </li>
+    <li>
+<a href="http://code.google.com/p/dcsharp/">DC#</a> (написан на CSharp, испотльзует GTK+; <a href="dcsharp.png">скриншот</a> &copy; zhuravlik; еще <a href="http://code.google.com/p/dcsharp/updates/list">шевелится</a>, есть шансы на успех)
+    </li>
+    <li>
+<a href="http://code.google.com/p/simpledcpp/">SimpleDC++</a> (написан на Python, использует GTK2; <a href="http://www.linux.org.ru/gallery/2872564.jpg">скриншот</a>; обсуждения на <a href="http://www.linux.org.ru/">ЛОР</a>е: <a href="http://www.linux.org.ru/view-message.jsp?msgid=2872564">начало</a>, <a href="http://www.linux.org.ru/view-message.jsp?msgid=2958632">продолжение</a>; развивается <a href="http://code.google.com/p/simpledcpp/source/list">вяло</a>, и только за счет сторонних патчей)
+    </li>
+    <li>
+<a href="http://directkonnect.sourceforge.net/">directKonnect</a> (<a href="http://directkonnect.sourceforge.net/screenshots.html">скриншоты</a>; не пробовал, но осуждаю: проблемы с кодировкой и зависимость от Qt3 и kdelibs-3; проект давно мертв)
+    </li>
+    <li>
+<a href="http://jucy.eu/">jucy</a> (написан на Java; <a href="http://jucy.eu/index.php/screenshots.html">скриншоты</a>; проект жив, есть шансы стать популярным)
+    </li>
+    <li>
+<a href="http://www.softservice.com.pl/ldcc/">LDCC</a>
+    </li>
+    <li>
+<a href="http://www.crzdc.net/">CrZDC++</a>
+    </li>
+  </ul>
+  <br>
+  Программы под винду и возможность их запуска под wine здесь не рассматриваются.
+  <br>
+  <br>
+  Кроме того, некоторые пользователи с нетерпением ждут чем закончится попытка <a href="http://forums.apexdc.net/topic/3775-were-porting-to-linux-and-paying/">портировать</a> ядро StrongDC++ и <a href="http://www.adcportal.com/forums/viewtopic.php?f=10&t=660">переписать</a> код ApexDC++ на <a href="http://www.wxwidgets.org/">wxwidgets</a>, что позволит сделать его кроссплатформенным. Автор StrongDC++ уже <a href="http://forums.apexdc.net/topic/3775-were-porting-to-linux-and-paying/page__st__20__p__28964#entry28964">продемонстрировал</a> <a href="http://strongdc.sourceforge.net/forum/download/file.php?id=159">скриншот</a> с работоспособной версией программы под Ubuntu (<a href="http://strongdc.sourceforge.net/forum/viewtopic.php?f=0&t=5998">подробности</a>).
+
+
+  <hr noshade="true" size="1px" width="100%">
+  Поскольку будущее за протоколом <a href="http://ru.wikipedia.org/wiki/Advanced_Direct_Connect">ADC</a>, то нет смысла ставить устаревшиние клиенты (например, Valknut и EiskaltDC, nanodc и microdc2), которые его не поддерживают. Актуальную таблицу со списком современных <a href="http://www.adcportal.com/wiki/Client_Software">ADC-клиентов</a> и их возможностях можно найти на wiki от разработчиков ADC-протокола.
+  <br>
+  <br>
+  Для полноты картины, см. схему ADC-клиентов, основанных на ядре DC++:
+  <center>
+    <a href="Dcpp_clients.scheme.svg" id="dcpp_clients">
+      <img src="Dcpp_clients.scheme.png" height="360" border="0">
+    </a>
+  </center>
+  <b>Информация о графике:</b>
+  <br>
+  <a href="Dcpp_clients.readme.txt">readme</a>,
+  <a href="Dcpp_clients.changelog.txt">changelog</a>
+  <br>
+  <b>Исходный файл:</b>
+  <br>
+  <a href="Dcpp_clients.scheme.dot">Dcpp_clients.scheme.dot</a>
+
+
+  <hr noshade="true" size="1px" width="100%">
+  Кроме ADC-клиентов важны так же и хабы. Актуальную таблицу со списком современных <a href="http://www.adcportal.com/wiki/Hub_Software">ADC-хабов</a> и их возможностях можно найти на той же wiki от разработчиков ADC-протокола.
+  <br>
+  <br>
+  Ну а в светлом далеком будущем, возможно, необходимость участия хабов в файл-обмене и личной переписке совсем отпадет. Уже есть черновая <a href="http://www.adcportal.com/wiki/index.php/StrongDC%2B%2B_DHT">реализация DHT</a> в StrongDC++, ApexDC++ и FlylinkDC++, которая лишь в незначительных деталях отличается от реализации <a href="http://translated.by/you/protocol-dht/into-ru/">DHT в торрентах</a> (<a href="http://www.bittorrent.org/beps/bep_0005.html">en</a>).
+  <br>
+  <br>
+  Разумеется, у DHT есть не только плюсы, но и минусы, о которых можно прочитать в соответствующей <a href="http://ru.wikipedia.org/wiki/DHT">статье</a> (<a href="http://en.wikipedia.org/wiki/Distributed_hash_table">en</a>) на Википедии.
+
+
+  <hr noshade="true" size="1px" width="100%">
+  <strong>Ссылки с этого сайта:</strong><br>
+  <a href="./magnet-links.html">
+    Настройка перехвата magnet-ссылок</a><br>
+  <a href="../freedcpp/">
+    FreeDC++ &mdash; пакеты для Debian GNU/Linux и Ubuntu</a><br>
+  <a href="../eiskaltdcpp/">
+    EiskaltDC++ &mdash; пакеты для Debian GNU/Linux и Ubuntu</a><br>
+  <a href="../eiskaltdcpp/faq.html">
+    EiskaltDC++ &mdash; Часто задаваемые вопросы</a><br>
+  <a href="../eiskaltdcpp/screenshots.html">
+    EiskaltDC++ &mdash; Screenshots</a><br>
+  <a href="../uhub/ru/">
+    uHub &mdash; пакеты для Debian GNU/Linux и Ubuntu</a><br>
+  <a href="../q4wine/ru/">
+    Q4Wine &mdash; пакеты для Debian GNU/Linux и Ubuntu</a>
+    (эта утилита может быть полезна для упертых пользователей виндовых dc-клиентов)<br>
+
+
+  <hr noshade="true" size="1px" width="100%">
+  <strong>Внешние ссылки:</strong><br>
+  <a href="http://ftopkuwarez.zbord.ru/viewtopic.php?t=30">
+    Неполный список DC клиентов в Linux</a><br>
+  <a href="http://forum.netbynet.ru/index.php?showtopic=79326">
+    Еще один список DC клиентов для разных ОС</a><br>
+  <a href="http://dczone.ru/index.php?option=com_content&task=view&id=652&Itemid=35">
+    И еще один длинный, но неполный список DC клиентов</a><br>
+  <a href="http://ru.wikipedia.org/wiki/DC%2B%2B">
+    Статья про DC++ и его потомков в Википедии</a><br>
+  <a href="http://ru.wikipedia.org/wiki/%D0%A1%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%BE%D0%B2_Direct_Connect">
+    Сравнение различных DC-клиентов в Википедии</a><br>
+  <a href="http://en.wikipedia.org/wiki/Direct_Connect_(file_sharing)">
+    Статья про DC в английской части Википедии</a><br>
+  <a href="http://en.wikipedia.org/wiki/Advanced_Direct_Connect">
+    Статья про ADC в английской части Википедии</a><br>
+  <a href="http://en.wikipedia.org/wiki/DC%2B%2B">
+    Статья про DC++ и его потомков в английской части Википедии</a><br>
+
+
+<!--
+http://www.adcportal.com/
+http://www.adcportal.com/wiki/index.php/ADC_Extensions
+http://mydc.ru/topic915.html?p=6721
+http://www.adcportal.com/wiki/index.php/Hub_Software
+http://www.adcportal.com/forums/viewtopic.php?f=10&t=676
+https://adc.svn.sourceforge.net/svnroot/adc/trunk/ADC-EXT.txt
+-->
+
+
+  <hr noshade="true" size="1px" width="100%">
+  <b>Лицензия:</b> <a href="http://creativecommons.org/publicdomain/mark/1.0/">Public Domain</a> (<a href="http://ru.wikipedia.org/wiki/Public_Domain">ru</a>, <a href="http://en.wikipedia.org/wiki/Public_Domain">en</a>)
+<!--
+  <a rel="license" href="http://creativecommons.org/publicdomain/mark/1.0/"><img src="http://i.creativecommons.org/p/mark/1.0/80x15.png" style="border-style:none;vertical-align:middle;" alt="Public Domain"/></a>
+-->
+  <br>
+  <b>Заметка:</b>
+  Все представленные здесь материалы можно использовать частично или полностью без указания ссылок на автора (меня) и оригинальную страницу.
+
+
+      <hr noshade="true" size="1px" width="100%">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td width="2%">
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t14.3;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://www.liveinternet.ru/stat/tehnick-8.narod.ru/">.</a>
+          </td>
+
+          <td width="2%">
+
+<script type='text/javascript' language='javascript'>
+
+r=escape(document.referrer); u=escape(document.URL);
+
+s=(typeof(screen)=='undefined')?'':screen.width+'x'+screen.height+'x'+(screen.colorDepth?screen.colorDepth:screen.pixelDepth);
+
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0" width="88" height="31" style="line-height:0;width:88px;"><tr style="height:10px;">
+
+<td style="padding:0;width:38px;height:10px;"><a href="http://www.24log.de" target="_blank"><img src="http://counter.24log.ru/buttons/24/bg24-4_1.gif" width="38" height="10" border="0" alt="Besucherzahler" title="Besucherzahler " style="margin:0;padding:0;" /></a></td>
+
+<td style="padding:0;width:50px;height:10px;"><a href="http://www.1russianbrides.com" target="_blank"><img src="http://counter.24log.ru/buttons/24/bg24-4_3.gif" width="50" height="10" border="0" alt="foreign brides" style="margin:0;padding:0;"></a></td></tr>
+
+<tr style="height:21px;"><td style="padding:0;width:38px;height:21px"><a href="http://www.24log.ru" target="_blank"><img src="http://counter.24log.ru/buttons/24/bg24-4_2.gif" width="38" height="21" alt="счетчик посещений" title="счетчик посещений" border="0" style="margin:0;padding:0;" /></a></td>
+
+<script type='text/javascript' language='javascript'>
+
+document.write('<td style="padding:0px;width:50px;height:21px;"><a href="http://www.24log.ru/rating/rating.php?c=16" target="_blank"><img border="0" width="50" height="21" src="http://counter.24log.ru/counter?id=86235&t=24&st=4&r='+r+'&s='+s+'&u='+u+'&rnd='+Math.random()+'" alt="Рейтинг: Разное" title="Показано число просмотров всего и за сегодня" style="margin:0;padding:0;" /></a></td>');
+
+</script></tr></table><NOSCRIPT><a href="http://www.russianwoman.ca"></a></NOSCRIPT>
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://www.24log.ru/stat/stat.php?project_id=86235">.</a>
+          </td>
+
+          <td width="2%">
+
+<!-- GoStats JavaScript Based Code -->
+<script type="text/javascript" src="http://gostats.ru/js/counter.js"></script>
+<script type="text/javascript">_gos='c4.gostats.ru';_goa=350940;
+_got=2;_goi=87;_goz=0;_gol='рейтинг сайтов';_GoStatsRun();</script>
+<noscript><a target="_blank" title="рейтинг сайтов"
+href="http://gostats.ru"><img alt="рейтинг сайтов"
+src="http://c4.gostats.ru/bin/count/a_350940/t_2/i_87/counter.png"
+style="border-width:0" /></a></noscript>
+<!-- End GoStats JavaScript Based Code -->
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://c4.gostats.ru/summary.xml?id=350940">.</a>
+          </td>
+
+          <td width="2%">
+
+<!-- MyCounter v.2.0 -->
+<script type="text/javascript"><!--
+my_id = 69834;
+my_width = 88;
+my_height = 31;
+my_alt = "MyCounter - счётчик и статистика";
+//--></script>
+<script type="text/javascript"
+  src="http://scripts.mycounter.ua/counter2.0.js">
+</script><noscript>
+<a target="_blank" href="http://mycounter.ua/"><img
+src="http://get.mycounter.ua/counter.php?id=69834"
+title="MyCounter - счётчик и статистика"
+alt="MyCounter - счётчик и статистика"
+width="88" height="31" border="0" /></a></noscript>
+<!--/ MyCounter -->
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://mycounter.ua/stats/?id=69834">.</a>
+          </td>
+
+          <td align="right">
+
+<a href="http://counter.co.kz" target="_blank"><img src="http://counter.co.kz/CounterCoKz?page=tehnick-8.narod.ru_dc_clients&style=netscap&digits=1" alt="." border=0 height="11"></a>
+
+          </td>
+        </tr>
+      </table>
+
+
+    </div>
+    <div style="text-align: center;">
+      <hr noshade="true" size="1px" width="100%">
+      <font size="-1">Tehnick &copy; 2009-2015</font>
+    </div>
+  </body>
+</html>

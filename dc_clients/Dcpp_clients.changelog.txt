@@ -1,0 +1,4 @@
+--- 2011-08-24 ---
+* Synced with http://www.adcportal.com/wiki/File:Dcpp_clients.png
+* Changed "FlylinkDC++" to "FlylinkDC++\nver <= 4xx"
+* Added "FlylinkDC++\nver >= 5xx"

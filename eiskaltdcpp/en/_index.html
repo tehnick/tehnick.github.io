@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+>
+<html lang="ru">
+  <head>
+    <meta content="text/html" charset="utf-8" http-equiv="content-type">
+    <meta content="Boris Pek" name="author">
+    <meta content="Tehnick (c) 2009-2015" name="copyright">
+    <title>EiskaltDC++ --- пакеты для Debian GNU/Linux и Ubuntu</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <script type="text/javascript" src="../func.js"></script>
+  <script type="text/javascript">timeoutId = setTimeout(AdHide, 1);</script>
+  <body bgcolor="white" text="black">
+
+
+    <div id="header" style="text-align: center;">
+      <hr noshade="true" size="1px" width="100%">
+      <font size="-1"> &nbsp;|&nbsp;
+      <a href="../">На главную</a> &nbsp;|&nbsp;
+      <a href="http://translate.google.com/translate?sl=ru&tl=en&u=http://tehnick-8.narod.ru/eiskaltdcpp/">Translate by Google <img src="../us.png" border="0"></a> &nbsp;|&nbsp;
+      </font>
+      <br>
+      <hr noshade="true" size="1px" width="100%">
+    </div>
+
+
+<div>
+  <h3>
+    EiskaltDC++ &mdash; пакеты для Debian GNU/Linux и Ubuntu
+  </h3>
+  <strong>Создано:</strong> 2010-02-11
+  <br>
+  <br>
+  <strong>Обновлено:</strong> 2011-09-13
+  <br>
+  <br>
+  <strong>Описание:</strong>
+  <br>
+  <br>
+<a href="http://code.google.com/p/eiskaltdc/">EiskaltDC++</a> (<a href="http://wiki.edumandriva.ru/wiki/index.php/%D0%9A%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D1%8B_Direct_Connect_%28DC%29_%D0%B8%D0%BB%D0%B8_Peer-To-Peer_%28P2P%29_%D0%B4%D0%BB%D1%8F_%D0%BB%D0%B8%D0%BD%D1%83%D0%BA%D1%81:_Valknut-mod,_EiskaltDC,_EiskaltDC%2B%2B#.D0.98.D1.81.D1.82.D0.BE.D1.80.D0.B8.D1.8F_.D1.81.D0.BE.D0.B7.D0.B4.D0.B0.D0.BD.D0.B8.D1.8F_.D0.BA.D0.BB.D0.B8.D0.B5.D0.BD.D1.82.D0.BE.D0.B2_Valknut-mod.2C_EiskaltDC.2C_EiskaltDC.2B.2B">не путать с EiskaltDC</a>) &mdash; это наследник EiskaltDC лишь формально, код полностью переписан. Программа кроссплатформенная: поддерживаются сборки под Linux, FreeBSD, Mac OS X и MS Windows.
+  <br>
+  <br>
+Зимой 2009/2010 возникла потребность в миграции на ядро <i>dcpp</i>. Код клиента был полностью переписан, интерфейс основан на Qt4 и внешне максимально приближен к оригинальным клиентам <a href="http://ru.wikipedia.org/wiki/DC%2B%2B">DC++</a>, название было изменено с EiskaltDC на EiskaltDC++. Библиотека <i>dclib</i> была выкинута на помойку, по причине ущербности своей архитектуры, а EiskaltDC++ стал графической оболочкой на Qt4 для слегка модифицированного ядра DC++. Так же как <a href="https://launchpad.net/linuxdcpp">LinuxDC++</a> и его форк <a href="../freedcpp/">FreeDC++</a> &mdash; графические оболочки на GTK+. Подавляющее большинство клиентов под MS Windows (оригинальный <a href="http://dcplusplus.sourceforge.net/">DC++</a>, <a href="http://strongdc.sourceforge.net/index.php?lang=eng">StrongDC++</a>, <a href="http://www.apexdc.net/">ApexDC++</a>, <a href="http://pepelink.narod.ru/">PelinkDC++</a>, <a href="http://www.flylinkdc.ru/">FlyLinkDC</a>, <a href="http://greylink.qupis.com/">Greylink</a> и <a 
+href="http://ru.wikipedia.org/wiki/%D0%A1%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%BE%D0%B2_Direct_Connect">другие</a>) тоже основаны на ядре DC++. Благодаря перехеду на эту библиотеку, EiskaltDC++ теперь поддерживает не только протокол <a href="http://ru.wikipedia.org/wiki/Direct_Connect">Direct Connect</a> (<a href="http://en.wikipedia.org/wiki/Direct_Connect_(file_sharing)">en</a>), но и протокол <a href="http://ru.wikipedia.org/wiki/Advanced_Direct_Connect">ADC</a> (<a href="http://en.wikipedia.org/wiki/Advanced_Direct_Connect">en</a>). Минимальное количество патчей в ядро DC++ упрощает его обновление до новых версий и гарантирует совместимость с другими клиентами. К сожалению, в последнее время число дополнительных патчей растет...
+  <br>
+  <br>
+Начиная с версии 2.1.0 в клиенте дополнительно поддерживается Gtk интерфейс (на основе FreeDC++ и LinuxDC++).
+  <br>
+  <br>
+Журналы изменений: <a href="http://github.com/negativ/eiskaltdcpp/raw/master/ChangeLog.txt">ChangeLog.txt</a>, <a href="http://github.com/negativ/eiskaltdcpp/raw/master/ChangeLog_ru.txt">ChangeLog_ru.txt</a> и <a href="http://github.com/negativ/eiskaltdcpp/raw/master/ChangeLog_uk.txt">ChangeLog_uk.txt</a>.
+  <br>
+Активность разработки (графики):
+<a href="http://github.com/negativ/eiskaltdcpp/network">network</a>,
+<a href="http://github.com/negativ/eiskaltdcpp/graphs/impact">impact</a>,
+<a href="http://github.com/negativ/eiskaltdcpp/graphs/punch_card">punch_card</a>.
+  <br>
+Активность разработки (коммиты):
+<a href="http://github.com/negativ/eiskaltdcpp/commits/master">master</a>,
+<a href="http://github.com/negativ/eiskaltdcpp/commits/2.2.x">2.2.x</a>
+  <br>
+Активность в багтрекере: <a href="http://code.google.com/p/eiskaltdc/updates/list">updates</a>.
+
+
+  <hr noshade="true" size="1px" width="100%">
+  <center>
+    <a href="./screenshots.html">
+      <img src="./eiskaltdcpp-qt_search.png" alt="eiskaltdcpp-qt_search.png" height="256" border="0">
+    </a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="./screenshots.html">
+      <img src="./eiskaltdcpp-gtk_search.png" alt="eiskaltdcpp-gtk_search.png" height="256" border="0">
+    </a>
+    <br>
+    EiskaltDC++ 2.1 (beta3). в <a href="http://www.debian.org/">Debian GNU/Linux</a> (<a href="http://www.debian.org/releases/">Sid</a>), графическая среда &mdash; <a href="http://www.kde.org/">KDE</a>-4.4.5
+    <br>
+    Для Qt-интерфейса (слева) и для Gtk-интерфейса (справа) используется тема <a href="http://en.wikipedia.org/wiki/QtCurve">QtCurve</a>
+  </center>
+
+
+  <hr noshade="true" size="1px" width="100%" id="devel">
+  <strong>Информация о разработке:</strong><br>
+  <br>
+  Основное обсуждение ведется в jabber конференции:
+  <font color="#005500">eiskaltdc@conference.gentoo.ru</font>
+  (логи: <a href="http://marsoft.dyndns.info/cgr-calendar.php?room=eiskaltdc">календарь</a>, <a href="http://gentoo.ru/jabber/logs/eiskaltdc@conference.gentoo.ru/2011/">каталог</a>)
+  <br>
+  Список участников проекта:
+на <a href="http://code.google.com/p/eiskaltdc/people/list">code.google.com</a> и на <a href="http://github.com/negativ/eiskaltdcpp/contributors">github.com</a>
+  <br>
+  Список авторов программы: <a href="http://github.com/negativ/eiskaltdcpp/raw/master/AUTHORS">authors</a>
+  <br>
+  Главный разработчик: <a href="http://code.google.com/u/dein.negativ/">dein.negativ</a>
+  <br>
+  <a href="http://open-life.org/blog/eiskaltdc">Блог проекта</a> на Open-Life.org
+  <br>
+  Так же, у проекта есть <a href="http://gitorious.org/eiskaltdcpp/eiskaltdcpp">git-зеркало</a> на gitorious.org и отдельная <a href="http://qt-apps.org/content/show.php?content=123452">страница</a> на qt-apps.org
+  <br>
+  <br>
+  <b>Внимание:</b> разработка программы переведена на <a href="http://github.com/negativ/eiskaltdcpp">github.com</a>
+  <br>
+  <br>
+Получить последние версии исходников можно так:<br>
+* git clone git://github.com/negativ/eiskaltdcpp.git<br>
+* wget -4 http://nodeload.github.com/negativ/eiskaltdcpp/tarball/master<br>
+* svn export http://svn.github.com/negativ/eiskaltdcpp/ eiskaltdcpp<br>
+  <br>
+  <a href="http://code.google.com/p/eiskaltdc/">Главная страница</a> проекта, <a href="http://code.google.com/p/eiskaltdc/issues/list">багтрекер</a> и <a href="http://code.google.com/p/eiskaltdc/w/list">wiki</a> по прежнему будут размещаться на code.google.com.
+  <br>
+  <br>
+<!--
+  Выход стабильного релиза EiskaltDC++ 2.0.1 состоялся 18 апреля 2010 года, точно  по плану. Следующий релиз EiskaltDC++ 2.0.2 будет выпущен ориентировочно 4 мая. Релиз EiskaltDC++ 2.0.3 планируется около 24 июня.
+-->
+<!--
+  Выход стабильного релиза EiskaltDC++ 2.0.2 состоялся 4 мая 2010 года, на 2 недели раньше запланированного срока. Следующий релиз EiskaltDC++ 2.0.3 будет выпущен ориентировочно 12 июня. Релиз EiskaltDC++ 2.1.0 планируется в начале октября.
+-->
+<!--
+  Выход стабильного релиза EiskaltDC++ 2.0.3 состоялся 8 июня 2010 года, точно  по плану. Следующий релиз EiskaltDC++ 2.1.0 ожидается 7 ноября. Релиз EiskaltDC++ 2.1.1 запланирован на 12 декабря.
+-->
+<!--
+  Выход стабильного релиза EiskaltDC++ 2.1.0 <a href="https://github.com/negativ/eiskaltdcpp/tree/v2.1.0">состоялся</a> 7 ноября 2010 года, точно  по плану. Следующий релиз EiskaltDC++ 2.1.1 ожидается 12 декабря.
+-->
+<!--
+  Выход стабильного релиза EiskaltDC++ 2.1.1 <a href="https://github.com/negativ/eiskaltdcpp/tree/v2.1.1">состоялся</a> 21 ноября 2010 года на несколько недель раньше запланированного. Следующий релиз EiskaltDC++ 2.2.0 ожидается 15 января 2011. C 26 декабря для тестирования доступна 2.2-beta1.
+-->
+<!--
+  Выход стабильного релиза EiskaltDC++ 2.2.0 <a href="https://github.com/negativ/eiskaltdcpp/tree/v2.2.0">состоялся</a> 16 января 2011 года, немного позже запланированного срока. Следующий релиз EiskaltDC++ 2.2.1 ожидается 7 марта 2011.
+-->
+  Выход стабильного релиза EiskaltDC++ 2.2.1 <a href="https://github.com/negativ/eiskaltdcpp/tree/v2.2.1">состоялся</a> 8 марта 2011 года, немного позже запланированного срока. Следующий релиз EiskaltDC++ 2.2.2 ожидается 9 апреля 2011.
+  <br>
+  <br>
+  <a href="https://github.com/negativ/eiskaltdcpp/raw/v2.2.1/ChangeLog_ru.txt">Информация о релизе 2.2.1</a> (<a href="https://github.com/negativ/eiskaltdcpp/raw/v2.2.1/ChangeLog.txt">en</a>, <a href="https://github.com/negativ/eiskaltdcpp/raw/v2.2.1/ChangeLog_uk.txt">uk</a>):
+  <br>
+<i>Общие изменения</i><br>
+* Исправлена сборка под MS Windows.<br>
+* Частичная синхронизация с ядром DC++ (0.785).<br>
+* Исправлена поддержка Lua-скриптов. (Была сломана в версии 2.2.0 при синхронизации с ядром DC++)<br>
+* Исправлен баг с "пустой шарой" при запуске. Теперь при обновлении списка файлов делается бэкап, который используется при запуске программы. Заметка: пустой список файлов --- это не пустая шара! (Многие пользователи заблуждались на этот счет)<br>
+* Исправлена функция ответа на поисковые запросы на ADC-хабах. (Баг был добавлен в версии 2.2.0 при синхронизации с ядром DC++)<br>
+* Добавлена возможность отключения сегментирования и изменения размера сегмента (в МиБ).<br>
+<i>eiskaltdcpp-qt</i><br>
+* Исправлено падение программы при использовании фильтра в результатах поиска, когда приходят новые результаты поискового запроса.<br>
+* Алгоритм для добавления разделителя (горизонтальной линии) для непрочитанных сообщений в чате обновлен. Теперь он работает прекрасно.<br>
+* Добавлен пункт просмотра свойств магнет-ссылок во все связанные меню.<br>
+* Добавлена поддержка поисковых ссылок (магнеты с ключом kt). (См. также: <a href="https://bugs.launchpad.net/dcplusplus/+bug/674545">https://bugs.launchpad.net/dcplusplus/+bug/674545</a>)<br>
+* Исправлено использование комбинации клавиш Ctrl+C в личном чате. (Баг был добавлен в версии 2.2.0)<br>
+* Добавлена опция отображения только завершенных передач в виджете передач. Используется простой фильтр: незавершенные загрузки можно скрыть и снова показать.<br>
+* Код для работы в базой данных (используется SQLite) признан стабильным. В таблицы завершенных передач были добавлены столбцы, и во избежание возможных проблем рекомендуется удалить старые файлы: ~/.config/eiskaltdc++/*.sqlite<br>
+* Некоторые исправления для пользовательских команд.<br>
+* Добавлена возможность подсветки ключевых слов в чате.<br>
+* Добавлена возможность настройки цветных прогрессбаров загрузки/отдачи.<br>
+* Добавлена опция воспроизведения звука при активном окне личного чата.<br>
+* Улучшения в алгоритме прокрутки истории отправленных сообщений.<br>
+* Исправлено падение программы при удалении активных (редактируемых) элементов из черного списка результатов поиска. Добавлена возможность сортировки списка.<br>
+* Теперь меню команд пользователя не отображается, если список команд хаба пуст.<br>
+* Добавлена опция скрытия иконок в меню. (Полезно для пользователей Mac OS X)<br>
+* Изменена реакция на пустой ник пользователя при запуске программы: теперь открывается диалог для ввода ника вместо общего диалога настроек.<br>
+* Добавлена возможность использования aspell в сборке под MS Windows.<br>
+* Добавлена возможность указать BIND_ADDRESS в диалоге настроек.<br>
+<i>eiskaltdcpp-gtk</i><br>
+* Улучшения в виджете поиска.<br>
+* Исправлено сохранение числа слотов отдачи в диалоге настроек. (Баг был добавлен в версии 2.2.0)<br>
+* Добавлена опция отображения только завершенных передач в виджете передач. Используется жесткий алгоритм: незавершенные загрузки удаляются из списка и больше не добавляются в него.<br>
+* Горячие клавиши были синхронизированы с EiskaltDC++ Qt.<br>
+* Изменен парсер магнет-ссылок.<br>
+* Исправлена сборка с libnotify >= 0.7.0.<br>
+* Исправлена проблема с загрузкой смайлов. (В xml-файлах смайл-паков было указано standalone = "no" вместо "yes")<br>
+* Добавлена возможность воспроизведения звуковых уведомлений без использования libgnome.<br>
+<i>eiskaltdcpp-daemon</i><br>
+* Исправлена отправка пароля при подключение к хабам с регистрацией.<br>
+* Переписана часть кода, ответственная за использование потоков. Теперь возможна сборка в MS Windows.<br>
+&nbsp; Заметка: данный бинарник не может быть запущен как служба Windows, поскольку процесс должен запускаться от имени существующего пользователя (для доступа к настройкам).<br>
+* XML-RPC доступ к программе сейчас находится в активной разработке, но еще не готов.<br>
+  <br>
+  <b>Внимание:</b> разработка <i>eiskaltdcpp-wt</i> прекращена, все имеющиеся наработки удалены. В следующих релизах планируется написать веб-интерфейс с использованием E(xt)JS.
+  <br>
+  <br>
+  Напомню, что в цикле разработки сейчас нет минорных релизов. Каждый релиз содержит исправления ошибок и реализацию нового функционала, и является значимым.
+  <br>
+  <br>
+  Достаточно подробный список с возможностями программы можно найти в <a href="http://ru.wikipedia.org/wiki/EiskaltDC%2B%2B">соответствующей статье</a> на Википедии (<a href="http://en.wikipedia.org/wiki/DC%2B%2B#EiskaltDC.2B.2B">en</a>).
+  <br>
+  <br>
+  См. так же <a href="faq.html">часто задаваемые вопросы</a> про EiskaltDC++.
+  <br>
+  <br>
+  К сожалению, автор FreeDC++ <a href="http://code.google.com/p/freedcpp/issues/detail?id=47">отказался</a> от объединения  с EiskaltDC++. Это его право. Мы <a href="http://code.google.com/p/eiskaltdc/issues/detail?id=518">сделали</a> форк. В настоящий момент <a href="../eiskaltdcpp/">EiskaltDC++ Gtk</a> работает стабильно, и содержит заметный набор улучшений по сравнению с оригиналом.
+
+
+   <hr noshade="true" size="1px" width="100%" id="deb">
+  <strong>Мои deb-пакеты:</strong><br>
+  Собранные пакеты можно скачать <a href="https://launchpad.net/~tehnick/+archive/tehnick/+packages">здесь</a>. Они подходят для Debian GNU/Linux версии &gt;= 6.0 (Squeeze) и для Ubuntu версии &gt;= 10.04 (Lucid Lynx). Там же доступны исходники.
+  <br>
+  <br>
+  Чтобы подключить <a href="https://launchpad.net/~tehnick/+archive/tehnick">мой архив пакетов</a> в Debian GNU/Linux Squeeze выполните:
+<pre>echo "deb http://ppa.launchpad.net/tehnick/tehnick/ubuntu lucid main" | sudo tee /etc/apt/sources.list.d/tehnick.list</pre>
+  Чтобы подключить <a href="https://launchpad.net/~tehnick/+archive/tehnick">мой архив пакетов</a> в Debian GNU/Linux Wheezy или Sid выполните:
+<pre>echo "deb http://ppa.launchpad.net/tehnick/tehnick/ubuntu natty main" | sudo tee /etc/apt/sources.list.d/tehnick.list</pre>
+  Импорт ключа:
+<pre>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 437276613F6729E2</pre>
+  Пользователи Ubuntu >= 10.04 (Lucid Lynx) могут добавить мой PPA, используя стандартную утилиту <font color="#005500">add-apt-repository</font>:
+<pre>sudo add-apt-repository ppa:tehnick/tehnick</pre>
+  Обновление списка доступных пакетов:
+<pre>sudo apt-get update</pre>
+  Установка <i>eiskaltdcpp</i>:
+<pre>sudo apt-get install eiskaltdcpp</pre>
+  Если вам нужен только интерфейс на Qt:
+<pre>sudo apt-get install eiskaltdcpp-qt</pre>
+  Если вам нужен только интерфейс на Gtk:
+<pre>sudo apt-get install eiskaltdcpp-gtk</pre>
+  Так же установите дополнительные пакеты:
+<pre>sudo apt-get install eiskaltdcpp-emoticons eiskaltdcpp-scripts eiskaltdcpp-sounds</pre>
+  Или вы можете установить <i>eiskaltdcpp-unstable</i> (ежедневные сборки):
+<pre>sudo apt-get install eiskaltdcpp-unstable</pre>
+  Если вам нужен только интерфейс на Qt:
+<pre>sudo apt-get install eiskaltdcpp-qt-unstable</pre>
+  Если вам нужен только интерфейс на Gtk:
+<pre>sudo apt-get install eiskaltdcpp-gtk-unstable</pre>
+  Так же установите дополнительные пакеты:
+<pre>sudo apt-get install eiskaltdcpp-emoticons-unstable eiskaltdcpp-scripts-unstable eiskaltdcpp-sounds-unstable</pre>
+  Пакеты, связанные с <i>eiskaltdcpp-unstable</i>, обновляются атоматически из <a href="http://github.com/negativ/eiskaltdcpp">git репозитория программы</a>. Cкрипт для обновления выглядит примерно <a href="https://github.com/tehnick/deb_packages/blob/master/Launchpad/eiskaltdcpp-unstable/automatic_update_eiskaltdcpp-unstable">так</a>.
+  <br>
+  <br>
+  Сообщения об ошибках в deb-пакетах пишите <a href="mailto:tehnick-8@yandex.ru">мне</a>. Багрепорты и пожелания к программе оставляйте <a href="http://code.google.com/p/eiskaltdc/issues/list">здесь</a> и следите за <a href="http://code.google.com/p/eiskaltdc/updates/list">изменениями</a>. Как написать хороший багрепорт <a href="http://code.google.com/p/eiskaltdc/wiki/issue_hints_ru">написано</a> (<a href="http://code.google.com/p/eiskaltdc/wiki/issue_hints_en">en</a>) на <a href="http://code.google.com/p/eiskaltdc/w/list">wiki проекта</a>.
+  <br>
+  <br>
+  Пакет <i>eiskaltdcpp</i> теперь <a href="http://packages.qa.debian.org/e/eiskaltdcpp.html">доступен</a> в официальных репозиториях <a href="http://packages.debian.org/squeeze/eiskaltdcpp">Debian</a> &gt;= 6.0 (Squeeze) и <a href="https://launchpad.net/ubuntu/+source/eiskaltdcpp">Ubuntu</a> &gt;= 10.10 (Maverick Meerkat).
+  <br>
+  <br>
+  Благодаря <a href="http://notesalexp.blogspot.com/">Alex_P</a> так же <a href="http://notesalexp.org/">доступны</a> неофициальные сборки пакетов <i>eiskaltdcpp</i> для Debian (squeeze, wheezy, sid) и Ubuntu (lucid, maverick).
+
+
+   <hr noshade="true" size="1px" width="100%" id="deb">
+Полный список доступных на лаунчпаде стабильных пакетов:<br>
+* eiskaltdcpp &mdash; EiskaltDC++ meta-package<br>
+* eiskaltdcpp-common &mdash; common files for EiskaltDC++<br>
+* eiskaltdcpp-emoticons &mdash; emoticons for EiskaltDC++<br>
+* eiskaltdcpp-scripts &mdash; scripts examples for EiskaltDC++<br>
+* eiskaltdcpp-sounds &mdash; sound files for EiskaltDC++<br>
+* eiskaltdcpp-qt-data &mdash; data files for EiskaltDC++ Qt<br>
+* eiskaltdcpp-qt &mdash; EiskaltDC++ GUI on Qt<br>
+* eiskaltdcpp-qt-dbg &mdash; EiskaltDC++ GUI on Qt (debug symbols)<br>
+* eiskaltdcpp-gtk-data &mdash; data files for EiskaltDC++ Gtk<br>
+* eiskaltdcpp-gtk &mdash; EiskaltDC++ GUI on Gtk<br>
+* eiskaltdcpp-gtk-dbg &mdash; EiskaltDC++ GUI on Gtk (debug symbols)<br>
+* eiskaltdcpp-daemon &mdash; EiskaltDC++ daemon<br>
+* eiskaltdcpp-daemon-dbg &mdash; EiskaltDC++ daemon (debug symbols)<br>
+* libeiskaltdcpp2.2 &mdash; DC++ kernel from EiskaltDC++<br>
+* libeiskaltdcpp2.2-dbg &mdash; DC++ kernel from EiskaltDC++ (debug symbols)<br>
+<br>
+Полный список доступных на лаунчпаде пакетов с ежедневными сборками:<br>
+* eiskaltdcpp-unstable &mdash; EiskaltDC++ meta-package<br>
+* eiskaltdcpp-common-unstable &mdash; common files for EiskaltDC++<br>
+* eiskaltdcpp-emoticons-unstable &mdash; emoticons for EiskaltDC++<br>
+* eiskaltdcpp-scripts-unstable &mdash; scripts examples for EiskaltDC++<br>
+* eiskaltdcpp-sounds-unstable &mdash; sound files for EiskaltDC++<br>
+* eiskaltdcpp-qt-data-unstable &mdash; data files for EiskaltDC++ Qt<br>
+* eiskaltdcpp-qt-unstable &mdash; EiskaltDC++ GUI on Qt<br>
+* eiskaltdcpp-qt-unstable-dbg &mdash; EiskaltDC++ GUI on Qt (debug symbols)<br>
+* eiskaltdcpp-gtk-data-unstable &mdash; data files for EiskaltDC++ Gtk<br>
+* eiskaltdcpp-gtk-unstable &mdash; EiskaltDC++ GUI on Gtk<br>
+* eiskaltdcpp-gtk-unstable-dbg &mdash; EiskaltDC++ GUI on Gtk (debug symbols)<br>
+* eiskaltdcpp-daemon-unstable &mdash; EiskaltDC++ daemon<br>
+* eiskaltdcpp-daemon-unstable-dbg &mdash; EiskaltDC++ daemon (debug symbols)<br>
+* libeiskaltdcpp2.2-unstable &mdash; DC++ kernel from EiskaltDC++<br>
+* libeiskaltdcpp2.2-unstable-dbg &mdash; DC++ kernel from EiskaltDC++ (debug symbols)<br>
+
+
+  <hr noshade="true" size="1px" width="100%" id="info">
+  <strong>Немного полезной информации:</strong><br>
+  <br>
+  * <a href="../dc_clients/magnet-links.html">Настройка перехвата magnet-ссылок</a>
+  <br>
+  <br>
+  * В зависимости от ваших локальный настроек и опций сборки программы путь для файлов конфигурации программы может быть: <font color="#005500">~/.eiskaltdc++</font> (для версии &le; 2.0.2), <font color="#005500">~/.config/eiskaltdc++/</font> (по умолчанию) или <font color="#005500">$XDG_CONFIG_HOME/eiskaltdc++/</font> (опционально)
+  <br>
+  <u>Основные</u> настройки по-прежнему совместимы с настройками других dc клиентов на ядре DC++.
+  <br>
+  Перенести настройки из LinuxDC++ или FreeDC++ можно просто скопировав файлы:
+<pre>cp -r ~/.dc++ ~/.config/eiskaltdc++/</pre>
+  <br>
+  * Начиная с самых ранних ревизий, в программе имеются такие полезные опции для избранных хабов:
+  <br>
+  1) Замена родного тега EiskaltDC++ на теги других клиентов (StrongDC, ApexDC, Flylink, DC++).
+  <br>
+  2) Указание IP-адреса, который нужно отправить данному хабу.
+  <br>
+  <br>
+  <strong>Советы для EiskaltDC++ Qt:</strong><br>
+  <br>
+<!--
+  * В <a href="http://code.google.com/p/eiskaltdc/issues/detail?id=44">issue 44</a> вы можете прочитать, как настроить действия на клики мышью по нику пользователя в чате. Используйте команду чата <font color="#005500">/ws</font> для настройки поведения по-умолчанию:
+<pre>/ws chat-dbl-click-action <0, 1 или 2> (даблклик левой кнопкой мыши)
+/ws chat-mdl-click-action <0, 1 или 2> (клик средней кнопкой мыши)
+</pre>
+  Здесь: 0 - ник в чат, 1 - список файлов, 2 - открыть личный чат.
+  <br>
+  Подобным образом можно редактировать любые настройки клиента (смотрите <font color="#005500">~/.eiskaltdc++/EiskaltDC++.xml</font> для подробностей).
+  <br>
+  <br>
+-->
+<!--
+  * В <a href="http://code.google.com/p/eiskaltdc/issues/detail?id=110">issue 110</a> объясняется как можно использовать команду <font color="#005500">/alias</font> в чате.
+  <br>
+  <br>
+-->
+<!--
+  * Проблема использования DynDNS (автообновление ip-адреса) обсуждалась в <a href="http://code.google.com/p/eiskaltdc/issues/detail?id=178">issue 178</a>.
+  <br>
+  <br>
+-->
+  * Чтобы временно отключить все отдачи можно в IP-фильтр добавить правило: !/0.
+  <br>
+Теперь кратко про ip-фильтр. Пусть у нас есть три правила:
+  <br>
+93.188.80.0/21<br>
+94.228.112.0/20<br>
+!0.0.0.0/0<br>
+Направление: входящие и исходящие соединения.<br> Первые два правила разрешают соединения из соответствующих подсетей, последнее блокирует соединения с любого адреса. Правила обходятся с первого до последнего или до !0.0.0.0/0, если оно присутствует.
+  <br>
+В итоге: передача данных возможна только с адресами подходящими под первые две записи.
+  <br>
+  <br>
+  * В настройках имеется возможность ограничить скорость хеширования (в МиБ/c), что может избавить вас от подтормаживания системы.
+  <br>
+  <br>
+  * Двойной щелчок по индикатору прогресса хэширования вызывает диалог хэширования.
+  <br>
+  <br>
+  * Можно быстро вставить магнет-ссылку на файл перетащив его из вашего любимого файлового менеджера на поле ввода чата, если файл находится в шаре и прохеширован.
+  <br>
+  <br>
+  * У тулбара есть редактор, где можно убрать лишние действия. Вызывается правой кнопкой мыши на тулбаре.
+  <br>
+  <br>
+  * В тулбаре любого типа (и в боковой панели) можно убрать кнопки закрытия вкладок, для этого ПКМ на свободном месте тулбара (или на заголовке бокового фрейма) и снять галочку "Показывать кнопки закрытия", при этом всегда остается возможность закрывать табы средней кнопкой мыши и из меню по ПКМ.
+  <br>
+  <br>
+  * Эти и другие <a href="http://code.google.com/p/eiskaltdc/wiki/usage_hints_ru">советы</a> можно найти на <a href="http://code.google.com/p/eiskaltdc/w/list">wiki проекта</a>. Там же <a href="http://code.google.com/p/eiskaltdc/wiki/Scripting">доступна</a> актуальная информация по использованию QtScript.
+  <br>
+  <br>
+  <strong>Советы для EiskaltDC++ Gtk:</strong><br>
+  <br>
+  * Все советы со <a href="../freedcpp/">страницы про FreeDC++</a> применимы и здесь.
+
+
+  <hr noshade="true" size="1px" width="100%" id="links">
+  <strong>Ссылки с этого сайта:</strong><br>
+  <a href="../dc_clients/">
+    DC клиенты для Linux</a><br>
+  <a href="../dc_clients/magnet-links.html">
+    Настройка перехвата magnet-ссылок</a><br>
+  <a href="./screenshots.html">
+    EiskaltDC++ &mdash; Screenshots</a><br>
+  <a href="./faq.html">
+    EiskaltDC++ &mdash; Часто задаваемые вопросы</a><br>
+  <a href="../freedcpp/">
+    FreeDC++ &mdash; пакеты для Debian GNU/Linux и Ubuntu</a><br>
+
+
+  <hr noshade="true" size="1px" width="100%">
+  <strong>Внешние ссылки:</strong><br>
+  <a href="http://unixforum.org/index.php?showtopic=95491&mode=linear">
+    Создание и тестирование p2p клиентов: EiskaltDC и EiskaltDC++</a>
+  (<a href="http://unixforum.org/index.php?showtopic=95491&view=getlastpost">end</a>)<br>
+  <a href="http://forum.ubuntu.ru/index.php?topic=94418.0;all">
+    Активная тема про EiskaltDC++ на форуме Ubuntu</a>
+  (<a href="http://forum.ubuntu.ru/index.php?topic=94418.new#new">end</a>)<br>
+  <a href="http://forum.ubuntu.ru/index.php?topic=79189.0;all">
+    Старая тема про EiskaltDC++ на форуме Ubuntu</a><br>
+  <a href="http://openhub.net/p/eiskaltdcpp">
+    Статистика проекта EiskaltDC++ на openhub.net</a><br>
+  <a href="https://aur.archlinux.org/packages.php?K=eiskaltdcpp">
+    PKGBUILD'ы для Arch Linux в AUR</a><br>
+  <a href="http://sisyphus.ru/ru/srpm/Sisyphus/eiskaltdcpp">
+    Пакет eiskaltdcpp в репозитории ALT Linux</a><br>
+  <a href="http://www.freshports.org/search.php?query=eiskaltdcpp">
+    Порты для FreeBSD</a><br>
+
+
+  <hr noshade="true" size="1px" width="100%">
+  <strong>Ссылки на документацию:</strong><br>
+  <a href="http://www.opennet.ru/docs/RUS/debian30_faq/node6.html#SECTION000613000000000000000">
+    Как мне сделать собственный .deb пакет?</a><br>
+  <a href="http://www.debian.org/doc/maint-guide/index.ru.html">
+    Руководство начинающего разработчика Debian</a><br>
+  <a href="http://www.debian.org/doc/debian-policy/">
+    Debian Policy Manual</a><br>
+  <a href="http://wiki.debian.org/DebianPackaging">
+    DebianPackaging - Debian Wiki</a><br>
+  <a href="http://ky6uk.ugatu.net/launchpad-its-really-simple">
+    Хорошая статья про Launchpad на русском для начинающих</a><br>
+  <a href="https://help.launchpad.net/Packaging">
+    Launchpad Help - Packaging</a><br>
+  <a href="https://wiki.ubuntu.com/PackagingGuide/Complete">
+    Ubuntu Wiki - PackagingGuide/Complete</a><br>
+
+
+  <hr noshade="true" size="1px" width="100%">
+  <b>Лицензия:</b> <a href="http://creativecommons.org/publicdomain/mark/1.0/">Public Domain</a> (<a href="http://ru.wikipedia.org/wiki/Public_Domain">ru</a>, <a href="http://en.wikipedia.org/wiki/Public_Domain">en</a>)
+<!--
+  <a rel="license" href="http://creativecommons.org/publicdomain/mark/1.0/"><img src="http://i.creativecommons.org/p/mark/1.0/80x15.png" style="border-style:none;vertical-align:middle;" alt="Public Domain"/></a>
+-->
+  <br>
+  <b>Заметка:</b>
+  Все представленные здесь материалы можно использовать частично или полностью без указания ссылок на автора (меня) и оригинальную страницу.
+
+
+      <hr noshade="true" size="1px" width="100%">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td width="2%">
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t14.3;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://www.liveinternet.ru/stat/tehnick-8.narod.ru/">.</a>
+          </td>
+
+          <td width="2%">
+
+<script type='text/javascript' language='javascript'>
+
+r=escape(document.referrer); u=escape(document.URL);
+
+s=(typeof(screen)=='undefined')?'':screen.width+'x'+screen.height+'x'+(screen.colorDepth?screen.colorDepth:screen.pixelDepth);
+
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0" width="88" height="31" style="line-height:0;width:88px;"><tr style="height:10px;">
+
+<td style="padding:0;width:38px;height:10px;"><a href="http://www.24log.de" target="_blank"><img src="http://counter.24log.ru/buttons/24/bg24-4_1.gif" width="38" height="10" border="0" alt="Besucherzahler" title="Besucherzahler " style="margin:0;padding:0;" /></a></td>
+
+<td style="padding:0;width:50px;height:10px;"><a href="http://www.1russianbrides.com" target="_blank"><img src="http://counter.24log.ru/buttons/24/bg24-4_3.gif" width="50" height="10" border="0" alt="foreign brides" style="margin:0;padding:0;"></a></td></tr>
+
+<tr style="height:21px;"><td style="padding:0;width:38px;height:21px"><a href="http://www.24log.ru" target="_blank"><img src="http://counter.24log.ru/buttons/24/bg24-4_2.gif" width="38" height="21" alt="счетчик посещений" title="счетчик посещений" border="0" style="margin:0;padding:0;" /></a></td>
+
+<script type='text/javascript' language='javascript'>
+
+document.write('<td style="padding:0px;width:50px;height:21px;"><a href="http://www.24log.ru/rating/rating.php?c=16" target="_blank"><img border="0" width="50" height="21" src="http://counter.24log.ru/counter?id=86235&t=24&st=4&r='+r+'&s='+s+'&u='+u+'&rnd='+Math.random()+'" alt="Рейтинг: Разное" title="Показано число просмотров всего и за сегодня" style="margin:0;padding:0;" /></a></td>');
+
+</script></tr></table><NOSCRIPT><a href="http://www.russianwoman.ca"></a></NOSCRIPT>
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://www.24log.ru/stat/stat.php?project_id=86235">.</a>
+          </td>
+
+          <td width="2%">
+
+<!-- GoStats JavaScript Based Code -->
+<script type="text/javascript" src="http://gostats.ru/js/counter.js"></script>
+<script type="text/javascript">_gos='c4.gostats.ru';_goa=350940;
+_got=2;_goi=87;_goz=0;_gol='рейтинг сайтов';_GoStatsRun();</script>
+<noscript><a target="_blank" title="рейтинг сайтов"
+href="http://gostats.ru"><img alt="рейтинг сайтов"
+src="http://c4.gostats.ru/bin/count/a_350940/t_2/i_87/counter.png"
+style="border-width:0" /></a></noscript>
+<!-- End GoStats JavaScript Based Code -->
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://c4.gostats.ru/summary.xml?id=350940">.</a>
+          </td>
+
+          <td width="2%">
+
+<!-- MyCounter v.2.0 -->
+<script type="text/javascript"><!--
+my_id = 69834;
+my_width = 88;
+my_height = 31;
+my_alt = "MyCounter - счётчик и статистика";
+//--></script>
+<script type="text/javascript"
+  src="http://scripts.mycounter.ua/counter2.0.js">
+</script><noscript>
+<a target="_blank" href="http://mycounter.ua/"><img
+src="http://get.mycounter.ua/counter.php?id=69834"
+title="MyCounter - счётчик и статистика"
+alt="MyCounter - счётчик и статистика"
+width="88" height="31" border="0" /></a></noscript>
+<!--/ MyCounter -->
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://mycounter.ua/stats/?id=69834">.</a>
+          </td>
+
+          <td align="right">
+
+<a href="http://counter.co.kz" target="_blank"><img src="http://counter.co.kz/CounterCoKz?page=tehnick-8.narod.ru_eiskaltdcpp&style=netscap&digits=1" alt="." border=0 height="11"></a>
+
+          </td>
+        </tr>
+      </table>
+
+
+    </div>
+    <div style="text-align: center;">
+      <hr noshade="true" size="1px" width="100%">
+      <font size="-1">Tehnick &copy; 2009-2015</font>
+    </div>
+  </body>
+</html>

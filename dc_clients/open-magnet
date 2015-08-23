@@ -1,0 +1,17 @@
+#!/bin/sh
+
+export DC_CLIENT='eiskaltdcpp-qt'
+export TORRENT_CLIENT='transmission-remote --add'
+
+if (echo "${1}" | grep '^magnet:?.*xt=urn:tree:tiger:') then
+    echo -e "Using DC-client"
+    "${DC_CLIENT}" "${1}" &
+elif (echo "${1}" | grep '^magnet:?.*xt=urn:btih:') then
+    echo -e "Using torrent-client"
+    "${TORRENT_CLIENT}" "${1}" &
+else
+    echo -e "Unknown type of magnet-link:\n${1}"
+    exit 1
+fi
+
+exit 0

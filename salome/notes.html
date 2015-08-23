@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+>
+<html lang="ru">
+  <head>
+    <meta content="text/html" charset="utf-8" http-equiv="content-type">
+    <meta content="Boris Pek" name="author">
+    <meta content="Tehnick (c) 2009-2015" name="copyright">
+    <title>SALOME - небольшие заметки</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <script type="text/javascript" src="../func.js"></script>
+  <script type="text/javascript">timeoutId = setTimeout(AdHide, 1);</script>
+  <body bgcolor="white" text="black">
+
+
+    <div id="header" style="text-align: center;">
+      <hr noshade="true" size="1px" width="100%">
+      <font size="-1"> &nbsp;|&nbsp;
+      <a href="../">На главную</a> &nbsp;|&nbsp;
+      </font>
+      <br>
+      <hr noshade="true" size="1px" width="100%">
+    </div>
+
+
+<div>
+  <h3>
+    SALOME &mdash; небольшие заметки
+  </h3>
+  <strong>Создано:</strong> 2009-10-20
+  <br>
+  <br>
+  <strong>Обновлено:</strong> 2010-06-01
+  <br>
+  <br>
+  <strong>Описание:</strong>
+  Здесь будут мои заметки о программе <a href="http://www.salome-platform.org/">SALOME</a> и ее использовании в Debian.
+
+  <hr noshade="true" size="1px" width="100%">
+  Что это за программа, можно узнать в <a href="http://ru.wikipedia.org/wiki/SALOME">википедии</a> и на <a href="http://www.salome-platform.org/about">офицальном сайте</a>. В последних версиях появились <a href="http://files.salome-platform.org/cea/adam/salomewindows/download/">сборки</a> SALOME под винду, но мне они не интересны и ниже упоминаться не будут.
+  <br>
+  <br>
+  Итак, <a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=457075">багрепорт</a> с запросом на добавление SALOME в репозиторий дебиана датирован 19 декабря 2007. Что же произошло с тех пор?
+  <br>
+  <br>
+  <a href="http://www.opennovation.com/apowell/">Мейнтейнер</a> дебиана проделал большую работу и собрал свою (правильную) версию <a href="http://lyre.mit.edu/~powell/salome/">пакетов</a>. Но в основной репозиторий дебиана эти пакеты не попали, и сейчас они сильно устарели. Почему это произошло, можно узнать <a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=457075#62">здесь</a>.
+  <br>
+  <br>
+  Наиболее интересной для конечного пользователя может быть сборка <a href="http://www.caelinux.com/CMS/index.php?option=com_content&task=view&id=46&Itemid=40">SALOME-MECA</a> от разработчика дистрибутива <a href="http://www.caelinux.com/CMS/">CAELinux</a>. Немного информации про CAELinux на русском есть <a href="http://www.linux.org.ru/view-message.jsp?msgid=3904597">здесь</a>, ну и <a href="http://www.google.ru/">гугл</a> конечно никто не отменял...
+  <br>
+  <br>
+  SALOME-MECA интересна тем, что помимо собственно платформы SALOME в эту сборку интегрированы решатели: <a href="http://www.code-aster.org/">Code-Aster</a> (структурный анализ) и <a href="http://www.code-saturne.org/">Code-Saturne</a> (анализ течения жидкостей и газов). Ее установка и использование проблем не вызывают (распаковать архив в любую дирректорию, исправить переменную <font color="#005500">ROOT_SALOME_MECA</font> в файле <font color="#005500">envSalomeMeca.sh</font>, выполнить скрипт <font color="#005500">postinstall.py</font>, запустить программу скриптом <font color="#005500">runSalomeMeca</font>), но обновляется эта сборка редко по вполне очевидным причинам. Последняя версия <a href="http://caelinux.com/CMS/index.php?option=com_joomlaboard&Itemid=52&func=view&id=2684&catid=2">SALOME-MECA-2009.1.GPL</a> основана на <a href="http://www.salome-platform.org/downloads/salome-v4.1.4">SALOME-v4.1.4</a>.
+  <br>
+  <br>
+  Последний релиз <a href="http://caelinux.com/CMS/index.php?option=com_joomlaboard&Itemid=52&func=view&id=3052&catid=2">CAELinux 2009</a> основан на Ubuntu 8.04 LTS 64, но создание отдельных deb-пакетов автор пока <a href="http://caelinux.com/CMS/index.php?option=com_joomlaboard&Itemid=52&func=view&id=3276&catid=2">не осилил</a> и создание <a href="http://caelinux.com/CMS/index.php?option=com_joomlaboard&Itemid=52&func=view&id=3402&catid=2">своего репозитория</a> тоже вызывает сложности. Ну и вообще, вам может быть полезно полистать эти <a href="http://caelinux.com/CMS/index.php?option=com_joomlaboard&Itemid=52">форум</a> и <a href="http://www.caelinux.org/wiki/index.php/Main_Page">wiki</a>...
+  <br>
+  <br>
+  И наконец последний, наиболее сложный вариант: установить SALOME и решатели самостоятельно, используя файлы с официальных сайтов. Может быть позднее я опишу этот процесс.
+  <br>
+  <br>
+  Cвои пожелания о развитии SALOME можно написать, например, <a href="http://www.salome-platform.org/forum/forum_12/293595272">здесь</a>.
+  <br>
+  <br>
+  <strong>UPD (2010-06-01):</strong><br>
+  Замечательная новость: пакет <i>salome</i> уже <a href="http://packages.qa.debian.org/s/salome.html">доступен</a> в основном репозитории Debian. И скоро он может быть появится в Ubuntu...
+
+
+  <hr noshade="true" size="1px" width="100%">
+  <strong>Установка SALOME:</strong><br>
+  <a href="http://www.sergeitvorogov.ru/archives/553">
+    Установка SALOME-MECA 2009.1 в Ubuntu 8.10</a><br>
+  <a href="http://caelinux.com/CMS/index.php?option=com_joomlaboard&Itemid=52&func=view&catid=4&id=3261">
+    Installing Salome5.1.1 binaries in CAELinux2009 (Ubuntu 8.04 64bit)</a><br>
+  <a href="http://www.salome-platform.org/forum/forum_9">
+    Раздел "Install & build" на официальном форуме SALOME</a><br>
+  <a href="http://wwiki.free.fr/index.php?post/2009/12/31/Install-Salome-513-on-Ubuntu-910-64-bit-Karmic">
+    Install Salome 5.1.3 on Ubuntu 9.10 64 bit Karmic</a><br>
+  <a href="http://code-saturne.blogspot.com/2009/12/installation-of-salome-512-on-kubuntu.html">
+    Installation of SALOME 5.1.2 on (K)Ubuntu 9.10 64 bit</a><br>
+  <a href="http://code-saturne.blogspot.com/2009/08/installation-of-codesaturne-200-on.html">
+    Installation of Code_Saturne 2.0.0 on Ubuntu 9.04</a><br>
+  <a href="http://code-saturne.blogspot.com/2010/01/compile-codesaturne-with-salome-binary.html">
+    Compile Code_Saturne with SALOME binary libraries</a><br>
+  <a href="http://code-saturne.blogspot.com/2010/01/installation-of-openfoam-16-on-ubuntu.html">
+    Installation of OpenFOAM 1.6 on Ubuntu 9.10</a><br>
+
+
+  <hr noshade="true" size="1px" width="100%">
+  <strong>Разные ссылки:</strong><br>
+  <a href="http://www.os-cfd.ru/mamb/index.php?option=com_content&task=category&sectionid=5&id=23&Itemid=40">
+    Сайты об СПО и ВГД</a> &ndash; хорошая подборка ссылок по теме, да и вообще <a href="http://www.os-cfd.ru/mamb/">сайт</a> полезный.<br>
+  <a href="http://www.laduga.ru/salome/salome.shtml">
+    Русскоязычная документация и примеры по SALOME</a><br>
+  <a href="http://www.freecae.ru/forums.php?m=topics&s=4">
+    Ветка форума про Salome на freecae.ru</a><br>
+
+
+  <hr noshade="true" size="1px" width="100%">
+  <strong>Ссылки на официальный сайт:</strong><br>
+  <a href="http://www.salome-platform.org/user-section/salome-tutorials/copy_of_salome-tutorial">
+    SALOME Tutorials</a><br>
+  <a href="http://files.opencascade.com/Salome/Salome5.1.3/SALOME_5_1_3_Release_Notes.pdf">
+    SALOME 5.1.3 Release Notes</a><br>
+  <a href="http://www.salome-platform.org/downloads/salome-v5.1.3">
+    Download SALOME 5.1.3</a><br>
+  Но разработчики настаивают на вашей регистрации: "You have to login(register) for download link"<br>
+  Вот прямые ссылки:<br>
+  <a href="http://files.opencascade.com/Salome/Salome5.1.3/InstallWizard_5.1.3_Debian_4.0.tar.gz">
+    Полный комплект для Debian 4.0 Etch 32bit</a>
+  (<a href="http://files.opencascade.com/Salome/Salome5.1.3/InstallWizard_5.1.3_Debian_4.0.tar.gz.md5">md5sum</a>)
+  <br>
+  <a href="http://files.opencascade.com/Salome/Salome5.1.3/InstallWizard_5.1.3_Debian_4.0_64bit.tar.gz">
+    Полный комплект для Debian 4.0 Etch 64bit</a>
+  (<a href="http://files.opencascade.com/Salome/Salome5.1.3/InstallWizard_5.1.3_Debian_4.0_64bit.tar.gz.md5">md5sum</a>)
+  <br>
+  Полный комплект SALOME включает в себя исходники, бинарники и интерактивный установщик.
+  <br>
+  <a href="http://files.opencascade.com/Salome/Salome5.1.3/Salome_5.1.3_32bits.tgz">
+    Архив с бинарниками для Linux 32bit</a>
+  (<a href="http://files.opencascade.com/Salome/Salome5.1.3/Salome_5.1.3_32bits.tgz.md5">md5sum</a>)
+  <br>
+  <a href="http://files.opencascade.com/Salome/Salome5.1.3/Salome_5.1.3_64bits.tgz">
+    Архив с бинарниками для Linux 64bit</a>
+  (<a href="http://files.opencascade.com/Salome/Salome5.1.3/Salome_5.1.3_64bits.tgz.md5">md5sum</a>)
+  <br>
+  Архив с бинарниками SALOME не нуждается в установке. Просто распакуйте его и запустите скрипт <font color="#005500">runSalome</font>.
+  <br>
+  <a href="http://files.opencascade.com/Salome/Salome5.1.3/src5.1.3.tar.gz">
+    Исходники</a>
+  (<a href="http://files.opencascade.com/Salome/Salome5.1.3/src5.1.3.tar.gz.md5">md5sum</a>)
+  и
+  <a href="http://files.opencascade.com/Salome/Salome5.1.3/doc5.1.3.tar.gz">
+    документация</a>
+  (<a href="http://files.opencascade.com/Salome/Salome5.1.3/doc5.1.3.tar.gz.md5">md5sum</a>)
+
+
+  <hr noshade="true" size="1px" width="100%">
+  <strong>Непроверенные ссылки, найденные гуглом:</strong><br>
+  <a href="http://dwg.ru/search.php?zone=1&mod=2&sName=Salome">
+    Какие-то материалы про SALOME на странном сайте</a><br>
+  <a href="http://salome-meca.narod.ru/">
+    Некий сайт про Salome-Meca</a> (быдлосайт; появился недавно; навряд ли перерастет во что-то полезное; проверить через 1-2 месяца)<br>
+
+
+      <hr noshade="true" size="1px" width="100%">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td width="2%">
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t14.3;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://www.liveinternet.ru/stat/tehnick-8.narod.ru/">.</a>
+          </td>
+
+          <td width="2%">
+
+<script type='text/javascript' language='javascript'>
+
+r=escape(document.referrer); u=escape(document.URL);
+
+s=(typeof(screen)=='undefined')?'':screen.width+'x'+screen.height+'x'+(screen.colorDepth?screen.colorDepth:screen.pixelDepth);
+
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0" width="88" height="31" style="line-height:0;width:88px;"><tr style="height:10px;">
+
+<td style="padding:0;width:38px;height:10px;"><a href="http://www.24log.de" target="_blank"><img src="http://counter.24log.ru/buttons/24/bg24-4_1.gif" width="38" height="10" border="0" alt="Besucherzahler" title="Besucherzahler " style="margin:0;padding:0;" /></a></td>
+
+<td style="padding:0;width:50px;height:10px;"><a href="http://www.1russianbrides.com" target="_blank"><img src="http://counter.24log.ru/buttons/24/bg24-4_3.gif" width="50" height="10" border="0" alt="foreign brides" style="margin:0;padding:0;"></a></td></tr>
+
+<tr style="height:21px;"><td style="padding:0;width:38px;height:21px"><a href="http://www.24log.ru" target="_blank"><img src="http://counter.24log.ru/buttons/24/bg24-4_2.gif" width="38" height="21" alt="счетчик посещений" title="счетчик посещений" border="0" style="margin:0;padding:0;" /></a></td>
+
+<script type='text/javascript' language='javascript'>
+
+document.write('<td style="padding:0px;width:50px;height:21px;"><a href="http://www.24log.ru/rating/rating.php?c=16" target="_blank"><img border="0" width="50" height="21" src="http://counter.24log.ru/counter?id=86235&t=24&st=4&r='+r+'&s='+s+'&u='+u+'&rnd='+Math.random()+'" alt="Рейтинг: Разное" title="Показано число просмотров всего и за сегодня" style="margin:0;padding:0;" /></a></td>');
+
+</script></tr></table><NOSCRIPT><a href="http://www.russianwoman.ca"></a></NOSCRIPT>
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://www.24log.ru/stat/stat.php?project_id=86235">.</a>
+          </td>
+
+          <td width="2%">
+
+<!-- GoStats JavaScript Based Code -->
+<script type="text/javascript" src="http://gostats.ru/js/counter.js"></script>
+<script type="text/javascript">_gos='c4.gostats.ru';_goa=350940;
+_got=2;_goi=87;_goz=0;_gol='рейтинг сайтов';_GoStatsRun();</script>
+<noscript><a target="_blank" title="рейтинг сайтов"
+href="http://gostats.ru"><img alt="рейтинг сайтов"
+src="http://c4.gostats.ru/bin/count/a_350940/t_2/i_87/counter.png"
+style="border-width:0" /></a></noscript>
+<!-- End GoStats JavaScript Based Code -->
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://c4.gostats.ru/summary.xml?id=350940">.</a>
+          </td>
+
+          <td width="2%">
+
+<!-- MyCounter v.2.0 -->
+<script type="text/javascript"><!--
+my_id = 69834;
+my_width = 88;
+my_height = 31;
+my_alt = "MyCounter - счётчик и статистика";
+//--></script>
+<script type="text/javascript"
+  src="http://scripts.mycounter.ua/counter2.0.js">
+</script><noscript>
+<a target="_blank" href="http://mycounter.ua/"><img
+src="http://get.mycounter.ua/counter.php?id=69834"
+title="MyCounter - счётчик и статистика"
+alt="MyCounter - счётчик и статистика"
+width="88" height="31" border="0" /></a></noscript>
+<!--/ MyCounter -->
+
+          </td>
+          <td width="2%" align="center">
+            <a href="http://mycounter.ua/stats/?id=69834">.</a>
+          </td>
+
+          <td align="right">
+
+<a href="http://counter.co.kz" target="_blank"><img src="http://counter.co.kz/CounterCoKz?page=tehnick-8.narod.ru_salome_notes.html&style=netscap&digits=1" alt="." border=0 height="11"></a>
+
+          </td>
+        </tr>
+      </table>
+
+
+    </div>
+    <div style="text-align: center;">
+      <hr noshade="true" size="1px" width="100%">
+      <font size="-1">Tehnick &copy; 2009-2015</font>
+    </div>
+  </body>
+</html>
