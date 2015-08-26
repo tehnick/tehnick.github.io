@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 >
 <html lang="ru">
   <head>
     <meta content="Boris Pek" name="author">
     <meta content="Tehnick (c) 2009-2015" name="copyright">
-    <title>uHub --- пакеты для Debian GNU/Linux и Ubuntu</title>
+    <title>uhub --- пакеты для Debian GNU/Linux и Ubuntu</title>
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <script type="text/javascript" src="../../func.js"></script>
@@ -26,21 +26,21 @@
 
 <div>
   <h3>
-    uHub &mdash; пакеты для Debian GNU/Linux и Ubuntu
+    uhub &mdash; пакеты для Debian GNU/Linux и Ubuntu
   </h3>
   <strong>Создано:</strong> 2011-09-27
   <br>
   <br>
-  <strong>Обновлено:</strong> 2013-06-23
+  <strong>Обновлено:</strong> 2015-08-27
   <br>
   <br>
   <strong>Описание:</strong>
   <br>
   <br>
-  <a href="http://www.uhub.org/">uHub</a> является высокопроизводительным p2p хабом для сетей ADC. Низкое потребление ресурсов позволяет ему обеспечивать связь нескольких тысяч пользователей на полноценном сервере, или же работать в качестве небольшого приватного хаба на встраиваемых устройствах.
+  <a href="http://www.uhub.org/">uhub</a> является высокопроизводительным p2p хабом для сетей ADC. Низкое потребление ресурсов позволяет ему обеспечивать связь нескольких тысяч пользователей на полноценном сервере, или же работать в качестве небольшого приватного хаба на встраиваемых устройствах.
   <br>
   <br>
-  uHub использует протокол <a href="http://ru.wikipedia.org/wiki/Advanced_Direct_Connect">Advanced Direct Connect</a> и совместим с DC++, LinuxDC++, EiskaltDC++ и другими ADC клиентами.
+  uhub использует протокол <a href="http://ru.wikipedia.org/wiki/Advanced_Direct_Connect">Advanced Direct Connect</a> и совместим с DC++, LinuxDC++, EiskaltDC++ и другими ADC клиентами.
   <br>
   <br>
   Основные характеристики:<br>
@@ -50,7 +50,7 @@
 * Поддержка расширенного контроля доступа.<br>
 * Простая настройка.<br>
   <br>
-  Версия последнего стабильного релиза: 0.4.1 (2012-11-07), подробности в <a href="https://raw.github.com/janvidar/uhub/master/ChangeLog">журнале изменений</a>.<br>
+  Версия последнего стабильного <a href="https://github.com/janvidar/uhub/tags">релиза</a>: 0.5.0 (2014-11-17), подробности в <a href="https://raw.github.com/janvidar/uhub/master/ChangeLog">журнале изменений</a>.<br>
   <br>
   Активность в проекте:
 <a href="https://github.com/janvidar/uhub/network">network graphic</a>,
@@ -67,23 +67,25 @@
 
   <hr noshade="true" size="1px" width="100%">
   <strong>deb-пакеты:</strong><br>
-  Собранные пакеты можно скачать <a href="https://launchpad.net/~tehnick/+archive/tehnick/+packages">здесь</a>. Они подходят для Debian GNU/Linux версии &gt;= 6.0 (Squeeze) и для Ubuntu версии &gt;= 10.04 (Lucid Lynx). Там же доступны исходники.
+  Собранные пакеты можно скачать <a href="https://launchpad.net/~tehnick/+archive/tehnick/+packages">здесь</a>. Они подходят для Debian GNU/Linux &gt;= 7.0 (Wheezy) и для Ubuntu &gt;= 12.04 (Precise Pangolin). Там же доступны исходники.
   <br>
   <br>
-  Чтобы подключить <a href="https://launchpad.net/~tehnick/+archive/tehnick">мой архив пакетов</a> в Debian GNU/Linux Squeeze или Wheezy выполните:
-<pre>echo "deb http://ppa.launchpad.net/tehnick/tehnick/ubuntu lucid main" | sudo tee /etc/apt/sources.list.d/tehnick.list</pre>
-  Чтобы подключить <a href="https://launchpad.net/~tehnick/+archive/tehnick">мой архив пакетов</a> в Debian GNU/Linux Jessie или Sid выполните:
-<pre>echo "deb http://ppa.launchpad.net/tehnick/tehnick/ubuntu precise main" | sudo tee /etc/apt/sources.list.d/tehnick.list</pre>
-  Импорт ключа:
-<pre>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 437276613F6729E2</pre>
-  Пользователи Ubuntu >= 10.04 (Lucid Lynx) могут добавить мой PPA, используя стандартную утилиту <font color="#005500">add-apt-repository</font>:
+  Подключение <a href="https://launchpad.net/~tehnick/+archive/tehnick">этого PPA</a> в Debian GNU/Linux Wheezy:
+<pre>sudo add-apt-repository -y 'deb http://ppa.launchpad.net/tehnick/tehnick/ubuntu precise main'</pre>
+  Подключение <a href="https://launchpad.net/~tehnick/+archive/tehnick">этого PPA</a> в Debian GNU/Linux Jessie:
+<pre>sudo add-apt-repository -y 'deb http://ppa.launchpad.net/tehnick/tehnick/ubuntu trusty main'</pre>
+  Подключение <a href="https://launchpad.net/~tehnick/+archive/tehnick">этого PPA</a> в Debian GNU/Linux Stretch:
+<pre>sudo add-apt-repository -y 'deb http://ppa.launchpad.net/tehnick/tehnick/ubuntu vivid main'</pre>
+  Подключение <a href="https://launchpad.net/~tehnick/+archive/tehnick">этого PPA</a> в Debian GNU/Linux Sid:
+<pre>sudo add-apt-repository -y 'deb http://ppa.launchpad.net/tehnick/tehnick/ubuntu vivid main'</pre>
+  Подключение <a href="https://launchpad.net/~tehnick/+archive/tehnick">этого PPA</a> в Ubuntu &gt;= 12.04 (Precise Pangolin):
 <pre>sudo add-apt-repository ppa:tehnick/tehnick</pre>
   Обновление списка доступных пакетов:
 <pre>sudo apt-get update</pre>
   Установка <i>uhub</i>:
-<pre>sudo apt-get install uhub</pre>
+<pre>sudo apt-get install -V uhub</pre>
   Или вы можете установить <i>uhub-unstable</i> (ежедневные сборки):
-<pre>sudo apt-get install uhub-unstable</pre>
+<pre>sudo apt-get install -V uhub-unstable</pre>
   Пакет <i>uhub-unstable</i> обновляется атоматически из <a href="https://github.com/janvidar/uhub/">git репозитория программы</a>. Cкрипт для обновления выглядит примерно <a href="https://github.com/tehnick/deb_packages/blob/master/Launchpad/uhub-unstable/automatic_update_uhub-unstable">так</a>.
   <br>
   <br>
@@ -96,8 +98,8 @@
   <hr noshade="true" size="1px" width="100%">
   <strong>Внешние ссылки:</strong><br>
   <a href="http://www.uhub.org/documentation.php">
-    uHub &ndash; Documentation</a><br>
-  <a href="http://wiki.san.ru/w/index.php/Uhub">
+    uhub &ndash; Documentation</a><br>
+  <a href="http://wiki.san.ru/w/index.php/uhub">
     Инструкция по настройке и запуску</a><br>
   <a href="http://forum.ubuntu.ru/index.php?topic=102657.0">
     Быстрый запуск в Ubuntu</a><br>

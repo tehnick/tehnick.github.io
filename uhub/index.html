@@ -4,7 +4,7 @@
   <head>
     <meta content="Boris Pek" name="author">
     <meta content="Tehnick (c) 2009-2015" name="copyright">
-    <title>uHub --- packages for Debian GNU/Linux and Ubuntu</title>
+    <title>uhub --- packages for Debian GNU/Linux and Ubuntu</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
   </head>
   <script type="text/javascript" src="../func.js"></script>
@@ -26,12 +26,12 @@
 
 <div>
   <h3>
-    uHub &mdash; packages for Debian GNU/Linux and Ubuntu
+    uhub &mdash; packages for Debian GNU/Linux and Ubuntu
   </h3>
   <strong>Created:</strong> 2011-09-27
   <br>
   <br>
-  <strong>Updated:</strong> 2013-06-23
+  <strong>Updated:</strong> 2015-08-27
   <br>
   <br>
   <strong>Description:</strong>
@@ -40,10 +40,10 @@
   This is a free translation of my notes and it may differ from <a href="./ru/">original</a>.
   <br>
   <br>
-  <a href="http://www.uhub.org/">uHub</a> is a high performance peer-to-peer hub for the ADC network. Its low memory footprint allows it to handle several thousand users on high-end servers, or a small private hub on embedded hardware.
+  <a href="http://www.uhub.org/">uhub</a> is a high performance peer-to-peer hub for the ADC network. Its low memory footprint allows it to handle several thousand users on high-end servers, or a small private hub on embedded hardware.
   <br>
   <br>
-  uHub uses the <a href="http://en.wikipedia.org/wiki/Advanced_Direct_Connect">Advanced Direct Connect</a> protocol, and is compatible with DC++, LinuxDC++, EiskaltDC++ and other ADC clients.
+  uhub uses the <a href="http://en.wikipedia.org/wiki/Advanced_Direct_Connect">Advanced Direct Connect</a> protocol, and is compatible with DC++, LinuxDC++, EiskaltDC++ and other ADC clients.
   <br>
   <br>
   Key features:<br>
@@ -53,7 +53,7 @@
 * Advanced access control support.<br>
 * Easy configuration.<br>
   <br>
-  Last stable release version: 0.4.1 (2012-11-07), see <a href="https://raw.github.com/janvidar/uhub/master/ChangeLog">changelog</a> for more details.<br>
+  Last stable <a href="https://github.com/janvidar/uhub/tags">release</a> version: 0.5.0 (2014-11-17), see <a href="https://raw.github.com/janvidar/uhub/master/ChangeLog">changelog</a> for more details.<br>
   <br>
   Activity in the project:
 <a href="https://github.com/janvidar/uhub/network">network graphic</a>,
@@ -70,23 +70,25 @@
 
   <hr noshade="true" size="1px" width="100%">
   <strong>deb packages:</strong><br>
-  Packages can be downloaded <a href="https://launchpad.net/~tehnick/+archive/tehnick/+packages">here</a>. They are suitable for Debian GNU/Linux version &gt;= 6.0 (Squeeze) and for Ubuntu version &gt;= 10.04 (Lucid Lynx). Sources are also available ibid.
+  Packages can be downloaded <a href="https://launchpad.net/~tehnick/+archive/tehnick/+packages">here</a>. They are suitable for Debian GNU/Linux &gt;= 7.0 (Wheezy) and for Ubuntu &gt;= 12.04 (Precise Pangolin). Sources are also available ibid.
   <br>
   <br>
-  To add <a href="https://launchpad.net/~tehnick/+archive/tehnick">my packages archive</a> in Debian GNU/Linux Squeeze or Wheezy:
-<pre>echo "deb http://ppa.launchpad.net/tehnick/tehnick/ubuntu lucid main" | sudo tee /etc/apt/sources.list.d/tehnick.list</pre>
-  To add <a href="https://launchpad.net/~tehnick/+archive/tehnick">my packages archive</a> in Debian GNU/Linux Jessie or Sid:
-<pre>echo "deb http://ppa.launchpad.net/tehnick/tehnick/ubuntu precise main" | sudo tee /etc/apt/sources.list.d/tehnick.list</pre>
-  Import the key:
-<pre>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 437276613F6729E2</pre>
-  Users of Ubuntu >= 10.04 (Lucid Lynx) can add my PPA using a standard utility <font color="#005500">add-apt-repository</font>:
+  Adding <a href="https://launchpad.net/~tehnick/+archive/tehnick">this PPA</a> in Debian GNU/Linux Wheezy:
+<pre>sudo add-apt-repository -y 'deb http://ppa.launchpad.net/tehnick/tehnick/ubuntu precise main'</pre>
+  Adding <a href="https://launchpad.net/~tehnick/+archive/tehnick">this PPA</a> in Debian GNU/Linux Jessie:
+<pre>sudo add-apt-repository -y 'deb http://ppa.launchpad.net/tehnick/tehnick/ubuntu trusty main'</pre>
+  Adding <a href="https://launchpad.net/~tehnick/+archive/tehnick">this PPA</a> in Debian GNU/Linux Stretch:
+<pre>sudo add-apt-repository -y 'deb http://ppa.launchpad.net/tehnick/tehnick/ubuntu vivid main'</pre>
+  Adding <a href="https://launchpad.net/~tehnick/+archive/tehnick">this PPA</a> in Debian GNU/Linux Sid:
+<pre>sudo add-apt-repository -y 'deb http://ppa.launchpad.net/tehnick/tehnick/ubuntu vivid main'</pre>
+  Adding <a href="https://launchpad.net/~tehnick/+archive/tehnick">this PPA</a> in Ubuntu &gt;= 12.04 (Precise Pangolin):
 <pre>sudo add-apt-repository ppa:tehnick/tehnick</pre>
   Updating the list of available packages:
 <pre>sudo apt-get update</pre>
   Installing <i>uhub</i>:
-<pre>sudo apt-get install uhub</pre>
+<pre>sudo apt-get install -V uhub</pre>
   Or you can install <i>uhub-unstable</i> (daily builds):
-<pre>sudo apt-get install uhub-unstable</pre>
+<pre>sudo apt-get install -V uhub-unstable</pre>
   <i>uhub-unstable</i> package is updated automatically from <a href="https://github.com/janvidar/uhub/">git repository of program</a>. Script for update is something like <a href="https://github.com/tehnick/deb_packages/blob/master/Launchpad/uhub-unstable/automatic_update_uhub-unstable">that</a>.
   <br>
   <br>
@@ -99,7 +101,7 @@
   <hr noshade="true" size="1px" width="100%">
   <strong>External links:</strong><br>
   <a href="http://www.uhub.org/documentation.php">
-    uHub &ndash; Documentation</a><br>
+    uhub &ndash; Documentation</a><br>
 
 
   <hr noshade="true" size="1px" width="100%">
