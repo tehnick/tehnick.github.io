@@ -8,9 +8,9 @@ function ShowEMail() {
 }
 
 function ShowJID() {
-    text ="tehnick";
+    text ="tehnick-8";
     text+="@";
-    text+="jabber.spbu.ru";
+    text+="ya.ru";
     obj=document.getElementById("jid");
     obj.innerHTML=text;
 }
