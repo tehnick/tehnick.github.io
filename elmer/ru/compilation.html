@@ -40,19 +40,19 @@
   <br>
   <a href ="http://www.csc.fi/english/pages/elmer">Elmer</a> &ndash; свободный пакет для конечноэлементного моделирования.<br>
   <br>
-  На официальном сайте есть несколько хороших PDF пособий по различным аспектам этой программы, а также примеры и учебники. Часть документации доступна в специальном пакете в репозиториях <a href="http://packages.debian.org/search?keywords=elmer-doc">дебиана</a> и <a href="http://packages.ubuntu.com/search?keywords=elmer-doc">убунту</a>, что <a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=548781">стало возможно</a> после <a href="http://www.elmerfem.org/forum/viewtopic.php?f=11&t=18">изменения лицензии документации</a> на <a href="http://ru.wikipedia.org/wiki/Creative_Commons">CC-BY-ND</a>.
+  На официальном сайте есть несколько хороших PDF пособий по различным аспектам этой программы, а также примеры и учебники. Часть документации доступна в специальном пакете в репозиториях <a href="https://packages.debian.org/search?keywords=elmer-doc">дебиана</a> и <a href="http://packages.ubuntu.com/search?keywords=elmer-doc">убунту</a>, что <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=548781">стало возможно</a> после <a href="http://www.elmerfem.org/forum/viewtopic.php?f=11&t=18">изменения лицензии документации</a> на <a href="http://ru.wikipedia.org/wiki/Creative_Commons">CC-BY-ND</a>.
   <br>
   <br>
   <center>
     <a href="../Elmer_on_Debian_Sid.png">
       <img src="../Elmer_on_Debian_Sid.png" alt="Elmer_on_Debian_Sid.png" width="512" height="384" border="0">
     </a><br>
-    Elmer в <a href="https://www.debian.org//">Debian GNU/Linux</a> (<a href="https://www.debian.org//releases/">Sid</a>), графическая среда &mdash; <a href="http://www.kde.org/">KDE</a>-4.2.4
+    Elmer в <a href="https://www.debian.org/">Debian GNU/Linux</a> (<a href="https://www.debian.org/releases/">Sid</a>), графическая среда &mdash; <a href="http://www.kde.org/">KDE</a>-4.2.4
   </center>
   <br>
   На скриншоте показаны: сетка в препроцессоре, блокнот с инструкциями для решателя, новый постпроцессор, который сейчас активно допиливают. Представлено решение простейшей задачи о естественной конвекции от нагретой пластины.<br>
   <br>
-  <a href="http://www.nic.funet.fi/pub/sci/physics/elmer/bin/windows/?C=M;O=D">Установочные файлы</a> под винду из trunk-ветки генерируются разработчиками ежедневно. deb-пакеты с бинарниками есть в <a href="http://packages.debian.org/search?keywords=elmer">Debian</a> &gt;= 6.0 (Squeeze) и <a href="http://packages.ubuntu.com/search?keywords=elmer">Ubuntu</a> &gt;= 9.10 (Karmic Koala), про пакеты для других дистрибутивов мне не известно.<br>
+  <a href="http://www.nic.funet.fi/pub/sci/physics/elmer/bin/windows/?C=M;O=D">Установочные файлы</a> под винду из trunk-ветки генерируются разработчиками ежедневно. deb-пакеты с бинарниками есть в <a href="https://packages.debian.org/search?keywords=elmer">Debian</a> &gt;= 6.0 (Squeeze) и <a href="http://packages.ubuntu.com/search?keywords=elmer">Ubuntu</a> &gt;= 9.10 (Karmic Koala), про пакеты для других дистрибутивов мне не известно.<br>
   <br>
   На официальном сайте есть вся необходимая информация по <a href="http://www.csc.fi/english/pages/elmer/sources">сборке</a> и использованию программы. Но кому-то может не хватить знания английского и/или умения компилировать программы самостоятельно, поэтому ниже будут приведены простые и краткие инструкции по сборке этой программы (а также созданию пакетов с ней, если необходимо) в нестабильной ветке дебиана (должны подойти и для пользователей убунты). Надеюсь, кому-то это будет полезно.<br>
   <br>
@@ -172,7 +172,7 @@ exit 0
 
   <strong>Сборка deb-пакетов</strong><br>
   <br>
-  Есть несколько способов создать deb-пакет с нуля. Например: <a href="http://www.opennet.ru/docs/RUS/debian30_faq/node6.html#SECTION000613000000000000000">простой</a> и <a href="https://www.debian.org//doc/maint-guide/index.ru.html">правильный</a> способы. Есть и другие... Но здесь я напишу о простом способе обновления уже имеющегося в репозитории пакета, используя полученные из SVN исходники, и с дополнительным предположением, что версия пакета не сильно отличается от версии исходников в SVN и все дополнительные патчи будут успешно применены.
+  Есть несколько способов создать deb-пакет с нуля. Например: <a href="http://www.opennet.ru/docs/RUS/debian30_faq/node6.html#SECTION000613000000000000000">простой</a> и <a href="https://www.debian.org/doc/maint-guide/index.ru.html">правильный</a> способы. Есть и другие... Но здесь я напишу о простом способе обновления уже имеющегося в репозитории пакета, используя полученные из SVN исходники, и с дополнительным предположением, что версия пакета не сильно отличается от версии исходников в SVN и все дополнительные патчи будут успешно применены.
   <br>
   <br>
   Сразу же установим необходимые для сборки пакетов утилиты:
@@ -297,19 +297,19 @@ sudo apt-get -f install
 
   <hr noshade="true" size="1px" width="100%">
   <strong>Elmer в Debian и Ubuntu:</strong><br>
-  <a href="http://packages.debian.org/sid/elmer">
+  <a href="https://packages.debian.org/sid/elmer">
     Описание пакета в Debian Sid</a><br>
   <a href="https://tracker.debian.org/pkg/elmerfem">
     Debian PTS</a>,
   <a href="https://launchpad.net/ubuntu/+source/elmerfem">
     страница на Launchpad</a><br>
-  <a href="http://bugs.debian.org/cgi-bin/pkgreport.cgi?pkg=elmer;dist=unstable">
+  <a href="https://bugs.debian.org/cgi-bin/pkgreport.cgi?pkg=elmer;dist=unstable">
     Ошибки в Debian</a>,
   <a href="https://bugs.launchpad.net/ubuntu/+source/elmerfem">
     ошибки в Ubuntu</a><br>
-  <a href="http://git.debian.org/?p=debian-science/packages/elmerfem.git">
+  <a href="https://git.debian.org/?p=debian-science/packages/elmerfem.git">
     Git репозиторий пакета</a><br>
-  <a href="http://anonscm.debian.org/gitweb/?p=debian-science/packages/elmerfem.git;a=blob_plain;f=debian/changelog">
+  <a href="https://anonscm.debian.org/gitweb/?p=debian-science/packages/elmerfem.git;a=blob_plain;f=debian/changelog">
     Журнал изменений пакета</a><br>
 
 
