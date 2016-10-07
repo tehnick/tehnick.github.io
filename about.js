@@ -10,7 +10,7 @@ function ShowEMail() {
 function ShowJID() {
     text ="tehnick-8";
     text+="@";
-    text+="ya.ru";
+    text+="jabber.ru";
     obj=document.getElementById("jid");
     obj.innerHTML=text;
 }
