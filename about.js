@@ -14,3 +14,12 @@ function ShowJID() {
     obj=document.getElementById("jid");
     obj.innerHTML=text;
 }
+
+function ShowMXID() {
+    text ="@";
+    text+="tehnick";
+    text+=":";
+    text+="matrix.org";
+    obj=document.getElementById("mxid");
+    obj.innerHTML=text;
+}
