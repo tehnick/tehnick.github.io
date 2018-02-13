@@ -1,8 +1,8 @@
-function ShowEMail() {
+function ShowEmail() {
     text ="tehnick-8";
     text+="@";
     text+="yandex.ru";
-    obj=document.getElementById("e-mail");
+    obj=document.getElementById("email");
     obj.href="mailto:"+text;
     obj.innerHTML=text;
 }
@@ -15,7 +15,7 @@ function ShowJID() {
     obj.innerHTML=text;
 }
 
-function ShowMXID() {
+function ShowMatrixID() {
     text ="@";
     text+="tehnick";
     text+=":";
@@ -23,3 +23,11 @@ function ShowMXID() {
     obj=document.getElementById("mxid");
     obj.innerHTML=text;
 }
+
+function ShowTelegramID() {
+    text ="@";
+    text+="tehnick";
+    obj=document.getElementById("telegramid");
+    obj.innerHTML=text;
+}
+
